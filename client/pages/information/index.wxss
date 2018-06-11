@@ -1,0 +1,42 @@
+/* pages/information/index.wxss */
+.info-containe {
+  width: 100%;
+}
+.info-container-top {
+  width: 100%;
+  padding: 20px;
+  padding-bottom: 25px;
+  background:#ffffff;
+  position: relative;
+  box-sizing: border-box;
+}
+.info-container-top .text{
+  font-family:PingFangSC-Medium;
+  font-size:20px;
+  color:#1f2c2a;
+  line-height:30px;
+  height: 30px;
+  text-align:left;
+}
+.drop-down{
+  opacity:0.8;
+  border:1px solid #e7e9f0;
+  border-radius:25px;
+  width:178px;
+  height:28px;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+ 
+}
+.hidden{
+   overflow: hidden;
+}
+.drop-down li{
+  font-family:PingFang-SC-Medium;
+  font-size:14px;
+  color:#79817f;
+  line-height:30px;
+  text-align:left;
+  margin-left: 15px;
+}

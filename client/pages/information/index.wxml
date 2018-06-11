@@ -1,0 +1,11 @@
+<!--pages/information/index.wxml-->
+<view class='info-container'>
+    <view class='info-container-top'>
+        <text class='text' >搜索</text>
+        <view class='drop-down' bindtap='showSearchSelection' >
+          <view wx:for="{{array}}">
+            <li>{{item}}</li>
+          </view>
+        </view>
+    </view>
+</view>

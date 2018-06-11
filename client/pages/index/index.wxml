@@ -36,4 +36,9 @@
             <text>快速增加 CGI</text>
         </navigator>
     </view>
+    <view class="">
+        <navigator url="../information/index" open-type="navigate" class="uploader-text">
+            <text>资料</text>
+        </navigator>
+    </view>
 </view>
