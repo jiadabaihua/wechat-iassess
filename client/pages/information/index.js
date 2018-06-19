@@ -6,17 +6,38 @@ Page({
    */
   data: {
     pagTitle:"资料",//页面标题名称
-    array:['全部','a','b','b'],
-    showSelection:false,
-    showSearchSelection:function(){
-      var that = this;
-      alert(887)
-      this.setData({
-        showSelection: !that.data.showSelection
-      })
-    }
+    array:['全部','a','b','d'],
+    showSelection:false
   },
-
+  /**
+   * 搜索下拉显示隐藏逻辑
+   */
+  showSearchSelection: function () {
+    let that = this;
+    this.setData({
+      showSelection: !that.data.showSelection
+    })
+  },
+  /**
+   * 切换选项逻辑
+   */
+  switchSelection:function(e){
+    let that = this;
+    let value = e.currentTarget.dataset.value,newValArr=[];
+    if (value !== '全部' ){
+      newValArr.push(value, '全部')
+    }else{
+      newValArr.push(value)
+    }
+    that.data.array.map(function(item){
+      if (item !== value && item !== '全部'){
+        newValArr.push(item)
+      }
+    })
+    this.setData({
+      array: newValArr
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */

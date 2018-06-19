@@ -2,9 +2,9 @@
 <view class='info-container'>
     <view class='info-container-top'>
         <text class='text' >搜索</text>
-        <view class='drop-down' bindtap='showSearchSelection' >
+        <view class="{{showSelection?'drop-down':'drop-down hidden'}}" bindtap='showSearchSelection' >
           <view wx:for="{{array}}">
-            <li>{{item}}</li>
+            <li bindtap='switchSelection' data-value="{{item}}">{{item}}</li>
           </view>
         </view>
     </view>
