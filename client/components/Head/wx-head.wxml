@@ -1,0 +1,21 @@
+<!--components/Head/wx-head.wxml-->
+<template name="header">
+  <view class='head-wrapper'>
+    <image src='../../images/headGround.png'></image>
+    <view class='user-info'>
+         <open-data type="userAvatarUrl" class='user-avatar'></open-data>
+    </view>
+    <view class='edit-btn'>
+          <image src='../../images/edit.png'></image>
+    </view>
+    <view class='user-name'>
+        <view>
+          <text class='nick-name'>{{nickName}}   欢迎您</text> 
+         </view>
+         <view>
+            <text>{{componyName}}</text>
+          </view>
+    </view>
+</view>
+</template>
+

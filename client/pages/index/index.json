@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "head": "../../components/Head/wx-head",
+    "card":"../../components/Card/Card"
+  }
+}

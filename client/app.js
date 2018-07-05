@@ -3,7 +3,10 @@ var qcloud = require('./vendor/wafer2-client-sdk/index')
 var config = require('./config')
 
 App({
-    onLaunch: function () {
+    globalData:{
+      userInfo:null
+    }
+    ,onLaunch: function () {
         qcloud.setLoginUrl(config.service.loginUrl)
     }
 })

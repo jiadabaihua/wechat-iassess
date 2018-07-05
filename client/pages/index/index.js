@@ -2,13 +2,30 @@
 var qcloud = require('../../vendor/wafer2-client-sdk/index')
 var config = require('../../config')
 var util = require('../../utils/util.js')
-
+var app=getApp();
 Page({
     data: {
         userInfo: {},
         logged: false,
         takeSession: false,
-        requestResult: ''
+        requestResult: '',
+        componyName:'北森云计算股份有限公司',
+        cardList:[{
+          testName:'嗨客杯培训考试（正式）',
+          status:1,   //0 未开始 1 进行中 2 已完成
+          startTime:'2018/06/01 14:00',
+          finishedTime:'2018/06/01 14:00'
+        }, 
+        {
+          testName: '嗨客杯培训考试（模拟）',
+          status: 2,   //0 未开始 1 进行中 2 已完成
+          startTime: '2018/06/01 14:00',
+          finishedTime: '2018/06/01 14:00'
+        }]
+    },
+    onLoad: function () {
+      this.getUserInfo();
+      // 查看是否授权
     },
     getInterFace:function(){
       wx.request({
@@ -22,6 +39,29 @@ Page({
           fail: function (res) { }
       })
     },
+    getUserInfo: function () {
+      var that = this
+
+      if (app.globalData.hasLogin === false) {
+        wx.login({
+          success: _getUserInfo
+        })
+      } else {
+        _getUserInfo()
+      }
+
+      function _getUserInfo() {
+        wx.getUserInfo({
+          success: function (res) {
+            app.globalData.userInfo = res.userInfo
+            that.setData({
+              hasUserInfo: true,
+              userInfo: res.userInfo
+            })
+          }
+        })
+      }
+    },
     // 用户登录示例
     login: function() {
         if (this.data.logged) return
@@ -34,6 +74,7 @@ Page({
             success(result) {
                 if (result) {
                     util.showSuccess('登录成功');
+                    getApp().globalData.userInfo = result;
                     that.setData({
                         userInfo: result,
                         logged: true
@@ -45,6 +86,7 @@ Page({
                         login: true,
                         success(result) {
                             util.showSuccess('登录成功')
+                            getApp().globalData.userInfo = result.data.data;
                             that.setData({
                                 userInfo: result.data.data,
                                 logged: true

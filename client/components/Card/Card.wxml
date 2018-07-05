@@ -1,0 +1,4 @@
+<!--components/Card/Card.wxml-->
+<view class='card'>
+    <text>{{card}}</text>
+</view>
