@@ -1,0 +1,36 @@
+  <scroll-view class="scroll-view_record" scroll-y style="height: 100%">
+    <view class='theme'>
+      <view class='theme-title'>
+          <view class='left-border'></view>
+          <view>本章主题</view>
+          <view class='right-border'></view>
+      </view>
+      <view class='theme-name'>{{testTheme}}</view>
+      <view class='test-result'>
+          <text>你的历史最佳演技</text>
+      </view>
+      <message text="{{summary}}" 
+               bgColor="#f0f4fa" 
+               fontColor="#8c90a5">
+      </message>
+      
+    </view>
+    <view class='talk-record'>
+        <view wx:for-items="{{talkLists}}" wx:for-item="item" wx:key='talk'>
+          <talkBox wx:for-items="{{item.lists}}" wx:for-item="list" wx:key='list'
+              normalImg="{{normalImg}}"
+              text="{{list.text}}"
+              id="{{list.id}}"
+              direction="{{list.direction}}">
+          </talkBox>
+          <message text="{{item.analysis}}" bgColor="#a7aabe" fontColor="#fff"> 
+              <view class='analysis-ico'>
+                <image src='./dengpao.png'></image>
+              </view>
+          </message>
+        </view>
+    </view>
+    <button class='review-btn' bindtap='gobackToTestList'>
+    返回
+    </button>
+  </scroll-view>

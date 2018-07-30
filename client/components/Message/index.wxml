@@ -1,0 +1,4 @@
+<view class='tip-message' style='background-color:{{bgColor}};color:{{fontColor}}'>
+   <slot></slot>
+  <text>{{text}}</text>
+</view>

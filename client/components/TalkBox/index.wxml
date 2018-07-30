@@ -1,0 +1,22 @@
+<view wx:if="{{direction=='left'}}" class="talk-item">
+  <view class='user-img'>
+    <image class='head-img' src='{{normalImg}}'></image>
+  </view>
+  <view class='talk-info'>
+    <view class='user-name'>贾云秋</view>
+    <view class='talk-text'>
+        <text>{{text}}</text>
+    </view>
+  </view>
+</view>
+
+<view wx:else class="talk-item right">
+  <view class='talk-info'>
+    <view class='talk-text'>
+        <text>{{text}}</text>
+    </view>
+  </view>
+  <view class='user-img'>
+    <open-data type="userAvatarUrl" class='head-img'></open-data>
+  </view>
+</view>

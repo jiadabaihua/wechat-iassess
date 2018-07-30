@@ -1,0 +1,12 @@
+.tip-message{
+  display: flex;
+  background:#eeecf4;
+  font-size:24rpx;
+  color:#9d97ad;
+  text-align:justify;
+  border-radius:10rpx;
+  line-height:36rpx;
+  box-sizing: border-box;
+  margin: 24rpx;
+  padding: 9px 11px;
+}

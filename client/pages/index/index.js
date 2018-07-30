@@ -10,13 +10,18 @@ Page({
         takeSession: false,
         requestResult: '',
         componyName:'北森云计算股份有限公司',
+        testName:'资格认证比赛',
         cardList:[{
+          testTheme:'调节他人情绪',
+          summary:"情绪自我修复指采取有效的方法和策略，快速有效地处理焦虑、沮丧等消极情绪。情绪自我修复能力强的人在工作和生活中很少受到情绪的干扰，以分析问题、解决问题为重。",
           testName:'嗨客杯培训考试（正式）',
           status:1,   //0 未开始 1 进行中 2 已完成
           startTime:'2018/06/01 14:00',
           finishedTime:'2018/06/01 14:00'
         }, 
         {
+          testTheme: '情绪自我修复',
+          summary: "调节他人情绪指采取有效的方法使他人从消极的情绪中脱离出来，重新获得力量。调节他人情绪能力强的人愿意倾听他人的感受，会积极表达自己的关心与想法并帮助他人走出困境。",
           testName: '嗨客杯培训考试（模拟）',
           status: 2,   //0 未开始 1 进行中 2 已完成
           startTime: '2018/06/01 14:00',
@@ -27,6 +32,13 @@ Page({
       this.getUserInfo();
       // 查看是否授权
     },
+    enterTest:function(e){
+      var index = e.currentTarget.dataset.index || 0;
+      var testData = this.data.cardList[index];
+      wx.navigateTo({
+        url: `../answerPage/index?testName= ${testData.testName}&testTheme=${testData.testTheme}&summary=${testData.summary} `,
+      })
+    },
     getInterFace:function(){
       wx.request({
         url: config.service.testUrl
@@ -36,7 +48,9 @@ Page({
         , success: function (res) { 
           
         },
-          fail: function (res) { }
+          fail: function (res) { 
+
+          }
       })
     },
     getUserInfo: function () {
@@ -58,6 +72,9 @@ Page({
               hasUserInfo: true,
               userInfo: res.userInfo
             })
+          },
+          fail:function(err){
+            
           }
         })
       }

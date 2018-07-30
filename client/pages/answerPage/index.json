@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "head": "../../components/Head/wx-head",
+    "card": "../../components/Card/Card",
+    "talkBox":"../../components/TalkBox/index",
+    "dialog":"../../components/Dialog/index",
+    "message": "../../components/Message/index"
+  }
+}

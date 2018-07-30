@@ -1,0 +1,14 @@
+<view style="display:{{hidden ? 'none' :'block'}}" class='mask-box'>
+  <view class='dialog-wrapper'>
+    <view class='close-icon' bindtap='_closePop'>
+      <image src='./close.png'></image>
+    </view>
+    <view style='clear:both'>
+      <view class='dialog-head__icon good'>
+          <image src='./nice.png'></image>
+      </view>
+      <view class='dialog-content'>{{content}}</view>
+      <view class='dialog-btn  bg-btn__{{btnDescribe.baseStyle}}' bindtap='clickBtn'>{{btnDescribe.text}}</view>
+    </view>
+  </view>
+</view>

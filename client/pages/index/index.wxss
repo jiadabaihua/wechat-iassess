@@ -3,6 +3,11 @@
   width: 100%;
   height: 334rpx;
 }
+.test-name{
+  color: #ffffff;
+  height: 33rpx;
+  margin-bottom: 22px;
+}
 .card{
   background:#ffffff;
   box-shadow:0 10rpx 30rpx 0 rgba(178,192,213,0.30);
@@ -12,4 +17,8 @@
   padding: 0 40rpx;
   height:398rpx;
   margin-bottom: 26rpx;
+}
+.card-wrapper{
+  width: 90%;
+  margin-top: -80rpx;
 }

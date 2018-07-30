@@ -1,0 +1,56 @@
+.analysis-ico{
+  flex: 0 0 25px;
+  height: 25px;
+  margin: 5px 9px 0 0;
+}
+.analysis-ico image{
+  width: 100%;
+  height: 100%;
+}
+.talk-record{
+  box-sizing: border-box;
+  width: 100%;
+  padding: 10px 11px;
+}
+.scroll-view_record{
+  background:#fcfbff;
+  border:2px solid #e6e4ef;
+  box-shadow:0 10rpx 25rpx 0 rgba(147,130,199,0.20);
+  border-radius:5px;
+}
+.theme-title{
+  font-size:24rpx;
+  color:#9d97ad;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 12px;
+}
+.left-border,.right-border{
+  height: 2px;
+  width: 37px;
+  background: #eeecf4;
+}
+.left-border{
+  margin-right: 3px;
+}
+.right-border{
+  margin-left: 3px;
+}
+.theme-name{
+  text-align: center;
+  margin-top: 4px;
+  font-size:36rpx;
+  color:#656a85;
+}
+.test-result{
+  font-size:26rpx;
+  color:#656a85;
+  margin: 19px 37px;
+}
+.review-btn{
+   width: 90%;
+  background:#97a0d4;
+  border-radius:5px;
+  color: #fff;
+}

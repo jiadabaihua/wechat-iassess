@@ -1,0 +1,48 @@
+<view style='height:calc(100% - {{messBoxHei}})' bindtap='hideSelectsBox'>
+  <scroll-view class="scroll-view_H" scroll-y style="height: 100%" scroll-into-view="{{toView}}">
+    <view wx:for-items="{{talkLists}}" wx:for-item="item" wx:key='talk'>
+      <message text="{{item.mess}}"> </message>
+      <talkBox wx:for-items="{{item.lists}}" wx:for-item="list" wx:key='list'
+          normalImg="{{normalImg}}"
+          text="{{list.text}}"
+          id="{{list.id}}"
+          direction="{{list.direction}}">
+      </talkBox>
+    </view>
+  </scroll-view>
+</view>
+
+<view class='select-box' wx:if="{{!showReviewBtn}}" style='height:{{messBoxHei}}'>
+    <view class='footer'>
+      <view class='input-area' bindtap='showSelectsBox'>
+          <view class='answer-text'>{{activeSelect.text}}</view>
+          <view class='send-message-btn' bindtap='sendMessage'>
+            <image src='./images/send.png'></image>
+          </view>
+      </view>
+    </view> 
+    <view class='selects-inner'>
+      <scroll-view class="scroll-view_Y" scroll-y style="height: 100%">
+        <view wx:for-items="{{selectData}}" wx:for-item="select" wx:key='select' 
+              class='select-list {{select.id===selectedId ? "high-light__bg" : ""}}'
+              bindtap='selectMessage'
+              data-text="{{select.text}}"
+              data-id="{{select.id}}"
+              data-score="{{select.score}}"
+              data-iscorrect="{{select.isCorrect}}"
+              data-dialogtext="{{select.dialogText}}">
+          <text>{{select.text}}</text>
+        </view>
+      </scroll-view>
+    </view>
+ </view>
+
+ <button wx:else class='review-btn' bindtap='goToReviewPage'>
+    进入小剧场回顾
+ </button>
+ <dialog 
+    bindbuttonClick="buttonClick"
+    hidden="{{hidden}}"
+    type="{{answerType}}"
+    content="{{activeSelect.dialogtext}}"
+    btnDescribe="{{btnDescribe}}"></dialog>

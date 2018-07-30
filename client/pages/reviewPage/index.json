@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "talkBox": "../../components/TalkBox/index",
+    "message": "../../components/Message/index"
+  }
+}

@@ -17,8 +17,8 @@
 }
 .edit-btn{
   position:absolute;
-  width:100rpx;
-  height:100rpx;
+  width:70rpx;
+  height:70rpx;
   border:1px solid #fff;
   display:flex;
   justify-content:center;
@@ -28,13 +28,19 @@
   padding: 20rpx;
 }
 .edit-btn image{
-  width:80rpx;
-  height:80rpx;
+  width:60rpx;
+  height:60rpx;
 }
 .user-name{
   color: #fff;
   text-align: center;
   position:absolute;
-  top:170rpx;
-  transform:translate(50%);
+  top:145rpx;
+  width: 100%;
+}
+.edit-info{
+  width: 100%;
+}
+.compony-name{
+  font-size: 28rpx;
 }

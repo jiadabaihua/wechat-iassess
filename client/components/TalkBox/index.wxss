@@ -1,0 +1,46 @@
+/* components/TalkBox/index.wxss */
+.user-img{
+  flex: 0 0 60rpx;
+  height: 60rpx;
+  border-radius:100%;
+  overflow:hidden;
+}
+.head-img{
+  width: 100%;
+  height: 100%;
+  border-radius:100%;
+}
+.talk-item{
+  margin: 5rpx 10rpx 48rpx;
+  display: flex;
+}
+.talk-info{
+  max-width: calc(80% - 90rpx);
+  margin-right: 5px;
+}
+.talk-text{
+  border-radius:5px 50rpx 50rpx 50rpx;
+  box-shadow:0 10rpx 40rpx 0 rgba(168,163,183,0.22);
+  background:#ffffff;
+  box-sizing:border-box;
+  padding:5px 10px;
+  color:#656a85;
+  font-size:14px;
+}
+.user-name{
+  font-size:14px;
+  color:#bec1d0;
+  margin-bottom:3px;
+}
+.right{
+  justify-content:flex-end;
+}
+.right .user-name{
+  text-align: right;
+}
+.right .talk-text{
+  background: #97a0d4;
+  color: #fff;
+  box-shadow:0 10rpx 40rpx 0 rgba(168,163,183,0.22);
+  border-radius:28rpx 5rpx 28rpx 28rpx;
+}
