@@ -27,7 +27,7 @@
   height: 100%;
 }
 .dialog-head__icon{
-  width:123rpx;
+  width:230rpx;
   height:123rpx;
   margin:0 auto;
 }
@@ -43,6 +43,27 @@
   line-height:46rpx;
   min-height:108px;
 }
+.dialog-content image{
+  width:36rpx;
+  height:35rpx;
+  padding-right: 18rpx;
+}
+.dialog-img-outer{
+  width: 100%;
+  margin: 20rpx 0rpx 30rpx;
+  height: 32rpx;
+  line-height: 32rpx;
+}
+.dialog-img:last-child{
+  width: 36rpx;
+}
+.dialog-img:last-child image{
+  /* background: red; */
+  padding: 0xp;
+}
+.dialog-img{
+  float: left;
+}
 .dialog-btn{
   width: 80%;
   padding: 8px;
@@ -51,6 +72,21 @@
   
   border-radius:5px;
   margin: 0 auto;
+  margin-bottom: 40rpx;
+}
+.dialog-line{
+  border-top: 2px solid #eeecf4;
+  width: 100%;
+  margin:50rpx 0rpx 32rpx;
+}
+.dialog-persent-num{
+  font-size: 50rpx;
+  color: #fdb66b;
+}
+.dialog-persent{
+  font-size: 24rpx;
+  color:#a7aaba;
+  opacity:0.5;
 }
 .bg-btn__base{
   background:#97a0d4;
