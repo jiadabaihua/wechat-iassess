@@ -1,6 +1,7 @@
 <!--components/Card/Card.wxml-->
 <template name='card'>
   <view class='card' >
+      <image></image>
       <text>{{testName}}</text>
   </view>
 </template>

@@ -14,9 +14,17 @@
   border-radius:10rpx;
   width:100%;
   box-sizing: border-box;
-  padding: 0 40rpx;
   height:398rpx;
   margin-bottom: 26rpx;
+  overflow: hidden;
+}
+.card image {
+  height: 40rpx;
+  background: red;
+  width: 100%;
+}
+.card text {
+  padding: 0 40rpx;
 }
 .card-wrapper{
   width: 90%;

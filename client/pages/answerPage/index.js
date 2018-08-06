@@ -40,10 +40,10 @@ Page({
       }
       return item;
     })
-
+ 
     this.setData({ 
       talkLists: talkLists,
-      hidden: false,
+      hidden: activeSelect.score? false:true,
       answerType: activeSelect.iscorrect ? 1 : 0,
       btnDescribe:{
         text: activeSelect.iscorrect ? '继续' : '再选一次',

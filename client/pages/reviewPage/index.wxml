@@ -7,7 +7,14 @@
       </view>
       <view class='theme-name'>{{testTheme}}</view>
       <view class='test-result'>
+      <view class='heart-img' style='flex-direction:row;'>
           <text>你的历史最佳演技</text>
+          <image  wx:for="{{[0, 1, 2, 3]}}"  src='./heart1.png'>
+          </image>
+          <image src='./heart2.png'>
+          </image>
+      </view>
+         
       </view>
       <message text="{{summary}}" 
                bgColor="#f0f4fa" 

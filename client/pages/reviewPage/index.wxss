@@ -49,8 +49,19 @@
   margin: 19px 37px;
 }
 .review-btn{
-   width: 90%;
+  width: 90%;
   background:#97a0d4;
   border-radius:5px;
   color: #fff;
+}
+.heart-img{
+ display: flex;
+}
+.heart-img text {
+  margin-right: 30rpx;
+}
+.heart-img image{
+  height: 46rpx;
+  width: 44rpx;
+  margin-right: 20rpx;
 }
