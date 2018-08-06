@@ -19,12 +19,16 @@
   overflow: hidden;
 }
 .card image {
-  height: 40rpx;
-  background: red;
+  height: 220rpx;
   width: 100%;
 }
-.card text {
-  padding: 0 40rpx;
+.card-text {
+  padding: 10rpx 24rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 24px;
+  margin-top:20px;
+
 }
 .card-wrapper{
   width: 90%;
