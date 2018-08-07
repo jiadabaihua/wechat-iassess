@@ -1,0 +1,5 @@
+<!--pages/home/index.wxml-->
+<view class='home'> 
+    <image src='./home.png'></image>
+    <button open-type="getUserInfo" bindgetuserinfo="onGotUserInfo">一键登录</button>
+</view>

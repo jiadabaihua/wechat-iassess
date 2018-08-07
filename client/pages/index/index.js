@@ -29,7 +29,12 @@ Page({
         }]
     },
     onLoad: function () {
-      this.getUserInfo();
+      let app = getApp();
+      this.setData({
+        hasUserInfo: true,
+        userInfo: app.globalData.userInfo
+      })
+      // this.getUserInfo();
       // 查看是否授权
     },
     enterTest:function(e){

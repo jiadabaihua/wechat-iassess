@@ -1,0 +1,15 @@
+/* pages/home/index.wxss */
+.home image{
+  width: 100%;
+  height: 500rpx;
+}
+.home button{
+  width: 515rpx;
+  height: 84rpx;
+  line-height: 84rpx;
+  margin-top: 200rpx;
+  background:#2acfb3;
+  font-family:PingFangSC-Regular;
+  font-size:30rpx;
+  color:#ffffff;
+} 
