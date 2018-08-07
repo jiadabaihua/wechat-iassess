@@ -17,19 +17,19 @@
 }
 .edit-btn{
   position:absolute;
-  width:70rpx;
-  height:70rpx;
+  width:40rpx;
+  height:40rpx;
   border:1px solid #fff;
   display:flex;
   justify-content:center;
-  top:24rpx;
+  top:40rpx;
   right:24rpx;
   border-radius: 100%;
   padding: 20rpx;
 }
 .edit-btn image{
-  width:60rpx;
-  height:60rpx;
+  width:32rpx;
+  height:32rpx;
 }
 .user-name{
   color: #fff;
@@ -40,7 +40,11 @@
 }
 .edit-info{
   width: 100%;
+  height: 551rpx;
 }
 .compony-name{
   font-size: 28rpx;
+  opacity:0.8;
+  font-family:PingFangSC-Medium;
+  color:#ffffff;
 }

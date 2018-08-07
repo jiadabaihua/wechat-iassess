@@ -10,7 +10,7 @@ Page({
         takeSession: false,
         requestResult: '',
         componyName:'北森云计算股份有限公司',
-        testName:'资格认证比赛',
+        testName:'情商小剧场',
         cardList:[{
           testTheme:'调节他人情绪',
           summary:"情绪自我修复指采取有效的方法和策略，快速有效地处理焦虑、沮丧等消极情绪。情绪自我修复能力强的人在工作和生活中很少受到情绪的干扰，以分析问题、解决问题为重。",

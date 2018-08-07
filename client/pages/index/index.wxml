@@ -3,10 +3,9 @@
 <import src="../../components/Card/Card.wxml" />
 <view class='container'>
 
-   <template is="header" data="{{...userInfo,componyName:componyName}}"/>
+   <template is="header" data="{{...userInfo,componyName:componyName,testName:testName}}"/>
    <view class='card-wrapper'>
         <view class='test-name'>
-            <view></view>
             {{testName}}
         </view>
         <view wx:for-items="{{cardList}}" wx:for-item="card" wx:key='card' class='card-wrap'                   bindtap='enterTest' data-index="{{index}}">

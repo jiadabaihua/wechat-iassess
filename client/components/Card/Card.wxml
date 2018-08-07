@@ -1,7 +1,7 @@
 <!--components/Card/Card.wxml-->
 <template name='card'>
   <view class='card' >
-      <image src='{{index?"./pic1.png":"./pic2.png"}}' ></image>
+      <image src='{{index?"./pic2.png":"./pic1.png"}}' ></image>
       <view class='card-text'>
         <text>{{testName}}</text>
       </view>
