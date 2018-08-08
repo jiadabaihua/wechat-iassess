@@ -6,6 +6,7 @@
           normalImg="{{normalImg}}"
           text="{{list.text}}"
           id="{{list.id}}"
+          isLast="{{item.index==talkLists.length-1?1:0}}"
           direction="{{list.direction}}">
       </talkBox>
     </view>

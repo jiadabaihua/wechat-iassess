@@ -8,6 +8,32 @@ var getActiveListObj=function(index){
     analysis: data.talkLists[index].analysis
   }
 }
+let showTalk= (datas,that,isFist,dd)=>{
+  let num = 0;
+  const talk = setInterval(() => {
+    if (num >= 3) {
+      clearInterval(talk)
+    } else {
+      if (isFist){
+        let copyData = Object.assign({}, datas)
+        copyData.lists = copyData.lists.slice(0, num + 1);
+        that.setData({
+          talkLists: [copyData]
+        })
+      }else{
+        let copyData = [].concat(JSON.parse(JSON.stringify(datas))), len = datas.length-1;
+        copyData[len].lists = copyData[len].lists.slice(0, num + 1);
+        let id = copyData[len].lists[num].id
+        let data = Object.assign({}, dd, {
+          talkLists: copyData,
+          toView: id,
+        })
+        that.setData(data);
+      }
+      num++
+    }
+  }, 1000)
+}
 
 Page({
   /**
@@ -28,11 +54,18 @@ Page({
     messBoxHei:'100rpx',
     selectData: data.talkLists[0].selects,
     normalImg: normalImg,
-    activeSelect: {text:'请选择你的回复',value:''},
-    talkLists: [getActiveListObj(0)]
+    activeSelect: {text:'请选择你的回复',value:''}
+    
   },
   sendMessage:function(e){
-    const { activeSelect, talkLists, activeQuestionId } = this.data;
+    const { activeSelect, talkLists, activeQuestionId } = this.data,
+          isShowDialog = getApp().globalData.isShowDialog;
+    //防抖
+    if (!isShowDialog && activeSelect.score){
+      getApp().globalData.isShowDialog = true
+    }else{
+      return;
+    }
     talkLists.map(item=>{
       if (item.qid == activeQuestionId){
           item.lists.push(activeSelect);
@@ -40,10 +73,15 @@ Page({
       }
       return item;
     })
- 
+    //弹框延迟加载
+    setTimeout(()=>{
+      getApp().globalData.isShowDialog = false;
+      this.setData({
+        hidden: activeSelect.score ? false : true,
+      })
+    },1500)
     this.setData({ 
       talkLists: talkLists,
-      hidden: activeSelect.score? false:true,
       answerType: activeSelect.iscorrect ? 1 : 0,
       btnDescribe:{
         text: activeSelect.iscorrect ? '继续' : '再选一次',
@@ -77,18 +115,26 @@ Page({
         })
         return ;
       }
-
-      let activeTalkQues = getActiveListObj(nextQuesIndex);
+      
+      const activeTalkQues = getActiveListObj(nextQuesIndex);
       this.data.talkLists.push(activeTalkQues);
-      this.setData({
-        talkLists: this.data.talkLists,
+      // this.setData({
+      //   talkLists:this.data.talkLists,
+      //   activeQuestionId: data.talkLists[nextQuesIndex].qid,
+      //   selectData: data.talkLists[nextQuesIndex].selects,
+      //   hidden:true,
+      //   toView: this.data.activeSelect.id
+      // })
+      let dd = {
         activeQuestionId: data.talkLists[nextQuesIndex].qid,
         selectData: data.talkLists[nextQuesIndex].selects,
-        hidden:true,
-        toView: this.data.activeSelect.id
-      })
-
-      this.resetPage();
+        hidden: true,
+        toView: this.data.activeSelect.id,
+        messBoxHei: '100rpx',
+        activeSelect: { text: '请选择你的回复', value: '' }
+      }
+      showTalk(this.data.talkLists, this,false,dd)
+      // this.resetPage();
     }else{
       this.setData({ 
         hidden:true,
@@ -134,7 +180,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-  
+    showTalk(getActiveListObj(0),this,true)
   },
 
   /**

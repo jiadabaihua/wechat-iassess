@@ -4,15 +4,15 @@ const talkLists = [{
   mess: '你的朋友最近遇到了点烦心事，向你寻求帮助！Help！',
   analysis:'此时，最佳的做法是表达理解他的焦虑，通过让他回顾以往的情况，帮他意识到任务不是不可完成的，并提供解决问题的思路推动他将关注点放到解决问题上，而不是一味的焦虑。',
   initData: [{
-    id: 'a1',
+    id: 'q1a1',
     direction: 'left',
     text: '哎，最近很烦'
   }, {
-    id: 'b1',
+    id: 'q1b1',
     direction: 'right',
     text: '怎么了？最近事情很多嘛？看你总是加班。'
   }, {
-    id: 'c1',
+    id: 'q1c1',
     direction: 'left',
     text: '现在是10月了，今年的任务刚完成一小半，有些焦虑啊！ '
   }],
@@ -41,15 +41,15 @@ const talkLists = [{
   mess: '朋友的倾诉尚未结束，继续接招吧！',
   analysis:'表达这种情况确实令人烦恼，帮助对方分析同事不合作的可能原因，促使他去解决问题。',
   initData: [{
-    id: 'a2',
+    id: 'q2a2',
     direction: 'left',
     text: '除了加班，单位人际关系也让我很头疼！'
   }, {
-    id: 'b2',
+    id: 'q2b2',
     direction: 'right',
     text: '怎么了？和同事相处出问题了吗？'
   }, {
-    id: 'c2',
+    id: 'q2c2',
     direction: 'left',
     text: '和同事合作的时候，我一直都积极响应，但他们却跟领导说我什么都没做。'
   }],
@@ -78,15 +78,15 @@ const talkLists = [{
   mess: '朋友的倾诉尚未结束，继续接招吧！',
   analysis:'提供解决问题的方案，而不是让对方一味地抱怨现况，否则只会诱发更多的消极情绪体验。',
   initData: [{
-    id: 'a3',
+    id: 'q3a3',
     direction: 'left',
     text: '你说的对！是需要沟通下。'
   }, {
-    id: 'b3',
+    id: 'q3b3',
     direction: 'right',
     text: '对啊，沟通下说不定情况能好转！'
   }, {
-    id: 'c3',
+    id: 'q3c3',
     direction: 'left',
     text: '是啊，现在有的同事说是合作，但总把活推给我做，出了问题，就跑来质问我！'
   }],

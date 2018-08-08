@@ -5,7 +5,8 @@ Component({
    */
   properties: {
     id:{
-      type:String
+      type: Number,
+      value:0
     },
     userImg:{
       type: String, 
@@ -22,6 +23,10 @@ Component({
     direction:{
       type: String,
       value: 'left'
+    },
+    isLast: {
+      type: Number,
+      value: 0
     }
   },
 
@@ -31,7 +36,6 @@ Component({
   data: {
     params:''
   },
-
   /**
    * 组件的方法列表
    */
