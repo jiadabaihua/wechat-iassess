@@ -1,2 +1,4 @@
 <!--pages/material/material.wxml-->
-<text>敬请期待</text>
+<view class='no-data'>
+   <image class='ziliao' src='../../images/ziliao.svg'></image>
+</view>

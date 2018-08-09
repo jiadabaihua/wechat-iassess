@@ -1,9 +1,9 @@
 <view wx:if="{{direction=='left'}}" class="talk-item">
   <view class='user-img'>
-    <image class='head-img' src='{{normalImg}}'></image>
+    <image class='head-img' src='../../images/a.svg'></image>
   </view>
   <view class='talk-info'>
-    <view class='user-name'>贾云秋</view>
+    <view class='user-name'>杨晨</view>
     <view class='talk-text'>
         <text>{{text}}</text>
     </view>

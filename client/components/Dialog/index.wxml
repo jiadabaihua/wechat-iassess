@@ -11,11 +11,11 @@
           <text>{{content}}</text>
           <view class='dialog-line'></view>
           <view class='dialog-persent'>
-              <text  class='dialog-persent-num'>{{50+btnDescribe.score*11}}%</text>的人也选了这个
+              <text  class='dialog-persent-num'>{{btnDescribe.star}}%</text>的人也选了这个
           </view>
           <view class='dialog-img-outer'>
               <view class='dialog-img' wx:for="{{[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]}}" wx:for-item="i" wx:key="i">
-                  <image src="{{i<btnDescribe.score+5?'./p1.png':'./p2.png'}}"></image>
+                  <image src="{{i<btnDescribe.starIcon?'./p2.png':'./p1.png'}}"></image>
               </view>
           </view>
       </view>

@@ -1,1 +1,94 @@
 /* pages/mine/mine.wxss */
+.mine{
+  background:#f7f6fd;
+  width: 100%;
+  height: 100%;
+}
+.mine-head{
+  width: 100%;
+  height: 220rpx;
+  background: #ffffff;
+  flex-direction:row;
+  display: flex;
+}
+.mine-profile{
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 100%;
+  overflow: hidden;
+  margin-top: 48rpx;
+  margin-left: 40rpx;
+}
+.mine-user-info{
+  margin-top: 48rpx;
+  margin-left: 30rpx;
+}
+.mine-user-info view{
+  font-family:PingFangSC-Regular;
+  font-size:34rpx;
+  color:#1f2c2a;
+  line-height:50rpx;
+  text-align:left;
+  margin-bottom: 20rpx;
+}
+.mine-user-info text {
+  font-family:PingFangSC-Regular;
+  font-size:26rpx;
+  color:#79817f;
+  line-height:50rpx;
+  text-align:left;
+ 
+}
+.edit-img{
+  border:2px solid #e7e9f0;
+  width:90rpx;
+  height:90rpx;
+  border-radius:100%;
+  margin-top: 65rpx;
+  margin-left: 160rpx;
+}
+.edit-img image{
+  width:40rpx;
+  height:40rpx;
+  margin-left:30rpx;
+  margin-top:24rpx;
+
+}
+.other-info{
+  width: 100%;
+  margin-top: 30rpx;
+  background: #ffffff;
+}
+.other-info image{
+ 
+  margin-top: 37rpx;
+  margin-left: 40rpx;
+}
+.other-info .m1{
+  width:40rpx;
+  height:26rpx;
+}
+.other-info .m2{
+  width:32rpx;
+  height:32rpx;
+}
+.other-info .m3{
+  width:34rpx;
+  height:34rpx;
+}
+.other-common{
+  display: flex;
+  flex-direction: row;
+}
+.other-common .text{
+  padding: 30rpx 0rpx;
+  /* height: 40rpx;  */
+  line-height: 40rpx;
+  font-size: 28rpx;
+  width: 100%;
+  border-bottom: solid 2px #eeecfc;
+  margin-left: 20rpx;
+}
+page{
+  height: 100%;
+}

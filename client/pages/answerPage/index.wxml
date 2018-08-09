@@ -1,7 +1,7 @@
 <view style='height:calc(100% - {{messBoxHei}})' bindtap='hideSelectsBox'>
   <scroll-view class="scroll-view_H" scroll-y style="height: 100%" scroll-into-view="{{toView}}">
     <view wx:for-items="{{talkLists}}" wx:for-item="item" wx:key='talk'>
-      <message text="{{item.mess}}"> </message>
+      <message text="{{item.mess}}" id="{{item.mid}}"> </message>
       <talkBox wx:for-items="{{item.lists}}" wx:for-item="list" wx:key='list'
           normalImg="{{normalImg}}"
           text="{{list.text}}"
@@ -30,6 +30,7 @@
               data-text="{{select.text}}"
               data-id="{{select.id}}"
               data-score="{{select.score}}"
+              data-star="{{select.star}}"
               data-iscorrect="{{select.isCorrect}}"
               data-dialogtext="{{select.dialogText}}">
           <text>{{select.text}}</text>

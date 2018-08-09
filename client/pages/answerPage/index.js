@@ -3,36 +3,47 @@ var normalImg ='http://stnew03.beisen.com/ux/landing-site/release/dist/images/31
 var getActiveListObj=function(index){
   return {
     qid: data.talkLists[index].qid,
+    mid: data.talkLists[index].mid,
     mess: data.talkLists[index].mess,
     lists: data.talkLists[index].initData,
     analysis: data.talkLists[index].analysis
   }
 }
-let showTalk= (datas,that,isFist,dd)=>{
+let showTalk = (datas, that, isFist, otherdata)=>{
   let num = 0;
-  const talk = setInterval(() => {
-    if (num >= 3) {
-      clearInterval(talk)
-    } else {
-      if (isFist){
+  if (isFist) {
+    const talk = setInterval(()=>{
+      if (num >= 3) {
+        clearInterval(talk)
+      } else {
         let copyData = Object.assign({}, datas)
         copyData.lists = copyData.lists.slice(0, num + 1);
         that.setData({
           talkLists: [copyData]
         })
-      }else{
-        let copyData = [].concat(JSON.parse(JSON.stringify(datas))), len = datas.length-1;
-        copyData[len].lists = copyData[len].lists.slice(0, num + 1);
-        let id = copyData[len].lists[num].id
-        let data = Object.assign({}, dd, {
+        num++;
+      }
+    },1000);
+  } else{
+    const callback = (isMes)=>{
+      if (num >= 4) {
+        clearInterval(talk)
+      } else {
+        let copyData = [].concat(JSON.parse(JSON.stringify(datas))), len =        datas.length - 1;
+        copyData[len].lists = isMes?[]: copyData[len].lists.slice(0, num );
+        let id = isMes ? copyData[len].mid:copyData[len].lists[num-1].id
+        let data = Object.assign({}, otherdata, {
           talkLists: copyData,
           toView: id,
         })
         that.setData(data);
       }
       num++
-    }
-  }, 1000)
+    } ;
+    callback(true);
+    const talk = setInterval(callback, 1000)
+  }
+
 }
 
 Page({
@@ -79,14 +90,16 @@ Page({
       this.setData({
         hidden: activeSelect.score ? false : true,
       })
-    },1500)
+    },600)
     this.setData({ 
       talkLists: talkLists,
       answerType: activeSelect.iscorrect ? 1 : 0,
       btnDescribe:{
         text: activeSelect.iscorrect ? '继续' : '再选一次',
         baseStyle: activeSelect.iscorrect ? 'base' : 'weaken',
-        score: activeSelect.score
+        score: activeSelect.score,
+        star: activeSelect.star,
+        starIcon: Math.round(activeSelect.star/10)
       },
     });
   },
@@ -125,15 +138,14 @@ Page({
       //   hidden:true,
       //   toView: this.data.activeSelect.id
       // })
-      let dd = {
+      let otherdata = {
         activeQuestionId: data.talkLists[nextQuesIndex].qid,
         selectData: data.talkLists[nextQuesIndex].selects,
         hidden: true,
-        toView: this.data.activeSelect.id,
         messBoxHei: '100rpx',
         activeSelect: { text: '请选择你的回复', value: '' }
       }
-      showTalk(this.data.talkLists, this,false,dd)
+      showTalk(this.data.talkLists, this, false, otherdata)
       // this.resetPage();
     }else{
       this.setData({ 

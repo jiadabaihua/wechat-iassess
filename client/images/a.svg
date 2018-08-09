@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="80px" height="80px" viewBox="0 0 80 80" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.2 (57519) - http://www.bohemiancoding.com/sketch -->
+    <title>头像</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <circle id="path-1" cx="40" cy="40" r="40"></circle>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="情感小剧场05" transform="translate(-60.000000, -741.000000)">
+            <g id="Group-6" transform="translate(30.000000, 701.000000)">
+                <g id="Group-3" transform="translate(30.000000, 40.000000)">
+                    <g id="头像">
+                        <g id="Oval-3">
+                            <mask id="mask-2" fill="white">
+                                <use xlink:href="#path-1"></use>
+                            </mask>
+                            <use id="Mask" fill="#AAB4ED" xlink:href="#path-1"></use>
+                            <g id="头像6" mask="url(#mask-2)" fill="#FFFFFF">
+                                <g transform="translate(15.000000, 15.000000)">
+                                    <path d="M25,49.5 C11.4690236,49.5 0.5,38.5309764 0.5,25 C0.5,11.4690236 11.4690236,0.5 25,0.5 C38.5309764,0.5 49.5,11.4690236 49.5,25 C49.5,38.5309764 38.5309764,49.5 25,49.5 Z M25,46.5 C36.8741221,46.5 46.5,36.8741221 46.5,25 C46.5,13.1258779 36.8741221,3.5 25,3.5 C13.1258779,3.5 3.5,13.1258779 3.5,25 C3.5,36.8741221 13.1258779,46.5 25,46.5 Z" id="Oval" fill-rule="nonzero"></path>
+                                    <rect id="Rectangle-12" fill-rule="evenodd" x="16" y="25" width="4" height="8" rx="2"></rect>
+                                    <rect id="Rectangle-12-Copy" fill-rule="evenodd" x="31" y="25" width="4" height="8" rx="2"></rect>
+                                    <path d="M2,26.1602257 L8.05973251,16.531428 L16.1388697,21.3458268 L12.8303864,14.5888214 L25.5364404,24.0013117 L24.200799,16.531428 L38.1949195,22.8417795 L35.7412668,17.6982398 L46.9087267,26.1602257 L49,26.1602257 C46.6256389,14.8391002 43.8222598,8.68803273 40.5898626,7.70702335 C35.7412668,6.23550929 30.2706539,-0.178316131 24.200799,1.19024394 C18.1309442,2.55880402 3.58667514,5.98332402 2,22.8417795" id="Path-4" fill-rule="evenodd"></path>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
