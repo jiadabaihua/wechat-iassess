@@ -8,6 +8,12 @@ App({
       isShowDialog:false
     }
     ,onLaunch: function () {
-        qcloud.setLoginUrl(config.service.loginUrl)
+        qcloud.setLoginUrl(config.service.loginUrl);
+      wx.login({
+        success: function (res) {
+          console.log(res)
+          
+        }
+      });
     }
 })

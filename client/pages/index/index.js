@@ -40,6 +40,7 @@ Page({
     enterTest:function(e){
       var index = e.currentTarget.dataset.index || 0;
       var testData = this.data.cardList[index];
+      app.globalData.cardIndex = index;
       wx.navigateTo({
         url: `../answerPage/index?testName= ${testData.testName}&testTheme=${testData.testTheme}&summary=${testData.summary} `,
       })

@@ -1,4 +1,4 @@
-// pages/home/index.js
+// pages/loginByPhoneNum/index.js
 Page({
 
   /**
@@ -7,34 +7,12 @@ Page({
   data: {
   
   },
-  getPhoneNumber: function (e) {
-    // console.log(e.detail.errMsg)
-    // console.log(e.detail.userInfo)
-    // console.log(e.detail.rawData);
-    
-    console.log(e.detail)
-    console.log(e.detail.iv)
-    console.log(e.detail.encryptedData) 
-    wx.switchTab({
-      url: "../index/index"
-    })
-  },
-  loginByPhoneNum:function(){
-    wx.navigateTo({
-      url: '../loginByPhoneNum/index'
-    })
-  },
+
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    wx.getUserInfo({
-      success:function(e){
-        console.log(e.userInfo)
-        let app = getApp();
-        app.globalData.userInfo = e.userInfo;
-      }
-    })
+  
   },
 
   /**

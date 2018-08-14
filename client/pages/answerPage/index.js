@@ -1,6 +1,8 @@
 var data = require('../../utils/data.js');
 var normalImg ='http://stnew03.beisen.com/ux/landing-site/release/dist/images/3115865b.deition.svg';
 var getActiveListObj=function(index){
+  index += getApp().globalData.cardIndex==0?0:3;
+  console.log(index)
   return {
     qid: data.talkLists[index].qid,
     mid: data.talkLists[index].mid,
@@ -13,23 +15,26 @@ let showTalk = (datas, that, isFist, otherdata)=>{
   let num = 0;
   if (isFist) {
     const talk = setInterval(()=>{
-      if (num >= 3) {
+      let index = getApp().globalData.cardIndex == 0 ? 0 : 3
+      if (num >= datas.lists.length) {
         clearInterval(talk)
       } else {
         let copyData = Object.assign({}, datas)
         copyData.lists = copyData.lists.slice(0, num + 1);
         that.setData({
-          talkLists: [copyData]
+          talkLists: [copyData],
+          selectData: data.talkLists[index].selects,
         })
         num++;
       }
     },1000);
   } else{
     const callback = (isMes)=>{
-      if (num >= 4) {
+      let copyData = [].concat(JSON.parse(JSON.stringify(datas))), len = datas.length - 1;
+      if (num >= copyData[len].lists.length+1) {
         clearInterval(talk)
       } else {
-        let copyData = [].concat(JSON.parse(JSON.stringify(datas))), len =        datas.length - 1;
+        
         copyData[len].lists = isMes?[]: copyData[len].lists.slice(0, num );
         let id = isMes ? copyData[len].mid:copyData[len].lists[num-1].id
         let data = Object.assign({}, otherdata, {
@@ -63,7 +68,7 @@ Page({
     answerType:0, //0,错误，1正确
     activeQuestionId: data.talkLists[0].qid,
     messBoxHei:'100rpx',
-    selectData: data.talkLists[0].selects,
+   
     normalImg: normalImg,
     activeSelect: {text:'请选择你的回复',value:''}
     
@@ -120,7 +125,9 @@ Page({
     if (this.data.answerType === 1) {
       let index = data.talkLists.findIndex(v => v.qid == this.data.activeQuestionId);
       let nextQuesIndex = index + 1;
-      if (nextQuesIndex >= data.talkLists.length){
+      let cardIndex = getApp().globalData.cardIndex == 0 ? 0 : 3;
+     
+      if (nextQuesIndex >= 3 ){
         this.setData({
           hidden: true,
           showReviewBtn:true,
@@ -139,8 +146,8 @@ Page({
       //   toView: this.data.activeSelect.id
       // })
       let otherdata = {
-        activeQuestionId: data.talkLists[nextQuesIndex].qid,
-        selectData: data.talkLists[nextQuesIndex].selects,
+        activeQuestionId: data.talkLists[nextQuesIndex + cardIndex].qid,
+        selectData: data.talkLists[nextQuesIndex + cardIndex].selects,
         hidden: true,
         messBoxHei: '100rpx',
         activeSelect: { text: '请选择你的回复', value: '' }

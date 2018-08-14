@@ -1,0 +1,61 @@
+/* pages/loginByPhoneNum/index.wxss */
+.phone-num{
+  display: flex;
+  justify-content: center;
+}
+.input-num{
+  width: 488rpx;
+  height: 65rpx;
+  display: flex;
+  flex-direction: row;
+  border-bottom: solid 1px #2acfb3;
+}
+.input-num image{
+  width:36rpx;
+  height: 48rpx;
+}
+.input-num input{
+  width: 100%;
+  height: 48rpx;
+  margin-left: 24rpx;
+}
+.login-phone-num .tips{
+  font-family:PingFangSC-Regular;
+  font-size:24rpx;
+  color:#cfece7;
+  letter-spacing:0;
+  text-align:left;
+  line-height:48rpx;
+}
+.validate{
+  width: 488rpx;
+  height: 65rpx;
+  display: flex;
+  flex-direction: row;
+  border-bottom: solid 1px #2acfb3;
+}
+.validate-outer{
+  margin-top: 40rpx;
+}
+.validate image{
+  width:48rpx;
+  height: 36rpx;
+  margin-top: 10rpx;
+}
+.validate input{
+  width: 276rpx;
+  height: 48rpx;
+  margin-left: 24rpx;
+}
+.validate view{
+  background:#2acfb3;
+  border-radius:2rpx;
+  width:140rpx;
+  height:60rpx;
+  font-family:PingFangSC-Regular;
+  font-size:24rpx;
+  color:#ffffff;
+  letter-spacing:0;
+  text-align:center;
+  line-height:60rpx;
+}

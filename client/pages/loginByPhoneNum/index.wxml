@@ -1,0 +1,19 @@
+<!--pages/loginByPhoneNum/index.wxml-->
+<view class='login-phone-num'>
+
+<view class='phone-num'>
+    <view class='input-num'>
+        <image class='' src='./phone1.png'></image>
+        <input class='' placeholder='输入手机号' placeholder-class='tips'></input>
+    </view>
+    
+</view>
+<view class='phone-num validate-outer'>
+    <view class='validate'>
+      <image class='' src='./phone2.png'></image>
+      <input class='' placeholder='验证码' placeholder-class='tips'></input>
+      <view>获取验证码</view>
+    </view>
+</view>
+</view>
+

@@ -7,9 +7,15 @@
   width: 515rpx;
   height: 84rpx;
   line-height: 84rpx;
-  margin-top: 200rpx;
+  
   background:#2acfb3;
   font-family:PingFangSC-Regular;
   font-size:30rpx;
   color:#ffffff;
-} 
+}  
+.home .btn1{
+  margin-top: 200rpx;
+}
+.home .btn2{
+  margin-top: 80rpx;
+}
