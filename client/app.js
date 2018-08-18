@@ -11,6 +11,7 @@ App({
     ,onLaunch: function (e) {
         console.log(e)
         qcloud.setLoginUrl(config.service.loginUrl);
+        
       wx.login({
         success: function (res) {
           let app = getApp();

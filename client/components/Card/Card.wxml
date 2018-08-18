@@ -1,32 +1,39 @@
 <!--components/Card/Card.wxml-->
 <template name='card'>
-  <view class='card' >
+  <view class='card'  >
       <!-- <image src='{{index?"./pic2.png":"./pic1.png"}}' ></image>
       <view class='card-text'>
         <text>{{testName}}</text>
       </view> -->
       <view class='title'>
-        嗨客杯培训考试（正式）
+        {{activityName}}
       </view>
       <view class='time'>
         <view class='start'>
           <text>开始时间</text>
-          <view class='common'>2018/06/01 14:00</view>
+          <view class='common'>{{startTime}}</view>
         </view>
         <view class='end'>
           <text>结束时间</text>
-          <view class='common'>2018/06/01 14:00</view>
+          <view class='common'>{{endTiem}}</view>
         </view>
       </view>
       <view class='card-bottom'>
-        <view bindtap='showActivityPop' class='activity-des'>
+        <view catchtap='showActivityPop' data-info="{{description}}" class='activity-des'>
           <image src='../../images/cb1.png'></image>
           <text>活动说明</text>
         </view>
-        <view>
+        <view data-id="{{index}}" catchtap='showAlert'>
           <image src='../../images/cb2.png'></image>
           <text>设置提醒</text>
         </view>
+      </view>
+      <view class='alert-time' style='display:{{isShowAlert?"block":"none"}}'>
+       <picker data-id="{{index}}" data-change="1" mode="date" value="{{remind}}" start="" end="" catchtap='s' catchchange="DateChange">
+    <view class="picker">
+      提醒时间: {{remind}}
+    </view>
+  </picker>
       </view>
   </view>
 </template>
