@@ -1,1 +1,67 @@
 /* components/Card/Card.wxss */
+.card{
+  background:#ffffff;
+  box-shadow:0 10rpx 30rpx 0 rgba(178,192,213,0.30);
+  border-radius:10rpx;
+  width:100%;
+  padding-left: 30rpx;
+  box-sizing: border-box;
+  min-height:320rpx;
+  margin-bottom: 26rpx;
+  overflow: hidden;
+}
+.card .title{
+  font-family:SFNSDisplay;
+  font-size:34rpx;
+  color:#1f2c2a;
+  line-height:50rpx;
+  height:50rpx;
+  text-align:left;
+  margin-top: 40rpx;
+}
+.card .time {
+  display: flex;
+  flex-direction: row;
+  font-size:22rpx;
+  margin-top: 30rpx;
+}
+.card .time .end{
+  margin-left: 82rpx;
+}
+.card .time text {
+  opacity:0.6;
+  font-family:PingFangSC-Medium;
+  font-size:22rpx;
+  color:#79817f;
+  line-height:30rpx;
+  height: 30rpx;
+  text-align:left;
+}
+.card .time .common {
+  opacity:0.8;
+  font-family:PingFangSC-Medium;
+  font-size:26rpx;
+  color:#1f2c2a;
+  letter-spacing:1rpx;
+  line-height:40rpx;
+  text-align:left;
+}
+.card .card-bottom{
+  display: flex;
+  flex-direction: row; 
+  margin-top: 50rpx;
+}
+.card .card-bottom text{
+  font-family:PingFangSC-Medium;
+  font-size:26rpx;
+  color:#abb1c3;
+  text-align:left;
+} 
+.card .card-bottom image{
+  width:21rpx;
+  height:23rpx;
+  margin-right: 15rpx;
+}
+.card .activity-des{
+  margin-right: 94rpx;
+}

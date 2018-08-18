@@ -1,0 +1,48 @@
+.activity-pop-mask{
+  position:fixed;
+  width:100%;
+  height:100%;
+  z-index:10;
+  top:0;
+  background:rgba(0,0,0,.2);
+}
+.activity-pop-mask button{
+  background:#2acfb3;
+  border-radius:50rpx;
+  width:540rpx;
+  height:84rpx;
+  line-height:84rpx;
+  margin-top: 40rpx;
+  font-family:PingFangSC-Medium;
+  font-size:30rpx;
+  color:#ffffff;
+  letter-spacing:1rpx;
+  text-align:center;
+}
+.activity-pop-content{
+  background:#ffffff;
+  border-radius:10px;
+  width:570rpx;
+  height:523rpx;
+  margin: 0 auto;
+  margin-top: 270rpx;
+  overflow: hidden;
+}
+.activity-pop-content .title{
+  font-family:PingFangSC-Medium;
+  font-size:36rpx;
+  color:#1f2c2a;
+  letter-spacing:1.2px;
+  text-align:center;
+  margin-top: 50rpx;
+  height: 50rpx;
+}
+.activity-pop-content .info{
+  font-family:PingFangSC-Medium;
+  font-size:26rpx;
+  color:#79817f;
+  letter-spacing:1rpx;
+  text-align:center;
+  line-height:46rpx;
+  padding: 40rpx 60rpx 0;
+}

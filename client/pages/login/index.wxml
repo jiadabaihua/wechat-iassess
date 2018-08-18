@@ -2,5 +2,6 @@
 <view class='home'> 
     <image src='./home.png'></image>
     <button open-type="getPhoneNumber" class='btn1' bindgetphonenumber="getPhoneNumber">一键登录</button>
-    <button  class='btn2' bindtap='loginByPhoneNum'>手机号注册登录</button>
+    <!-- <button  class='btn2' bindtap='loginByPhoneNum'>手机号注册登录</button> -->
+   
 </view>

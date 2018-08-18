@@ -26,14 +26,24 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-  
+    wx.setTabBarItem({
+      index: 1,
+      iconPath: "images/material1.png",
+      selectedIconPath: "images/material1.png",
+      text: '资料'
+    })
   },
 
   /**
    * 生命周期函数--监听页面隐藏
    */
   onHide: function () {
-  
+    wx.setTabBarItem({
+      index: 1,
+      iconPath: "images/material.png",
+      selectedIconPath: "images/material.png",
+      text: '资料'
+    })
   },
 
   /**

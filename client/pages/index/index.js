@@ -26,9 +26,11 @@ Page({
           status: 2,   //0 未开始 1 进行中 2 已完成
           startTime: '2018/06/01 14:00',
           finishedTime: '2018/06/01 14:00'
-        }]
+        }],
+        showActivityPop:false
     },
     onLoad: function () {
+      
       let app = getApp();
       this.setData({
         hasUserInfo: true,
@@ -41,9 +43,9 @@ Page({
       var index = e.currentTarget.dataset.index || 0;
       var testData = this.data.cardList[index];
       app.globalData.cardIndex = index;
-      wx.navigateTo({
-        url: `../answerPage/index?testName= ${testData.testName}&testTheme=${testData.testTheme}&summary=${testData.summary} `,
-      })
+      // wx.navigateTo({
+      //   url: `../answerPage/index?testName= ${testData.testName}&testTheme=${testData.testTheme}&summary=${testData.summary} `,
+      // })
     },
     getInterFace:function(){
       wx.request({
@@ -356,6 +358,29 @@ Page({
             });
         }
     },
+      /**
+    * 生命周期函数--监听页面显示
+    */
+      onShow: function () {
+        wx.setTabBarItem({
+          index: 0,
+          iconPath: "images/activity.png",
+          selectedIconPath: "images/activity.png",
+          text:'活动'
+        })
+      },
+
+      /**
+       * 生命周期函数--监听页面隐藏
+       */
+      onHide: function () {
+        wx.setTabBarItem({
+          index: 0,
+          iconPath: "images/activity1.png",
+          selectedIconPath: "images/activity1.png",
+          text: '活动'
+        })
+      },
 
     /**
      * 点击「关闭信道」按钮，关闭已经打开的信道
@@ -366,5 +391,10 @@ Page({
         }
         util.showBusy('信道连接中...')
         this.setData({ tunnelStatus: 'closed' })
+    },
+    showActivityPop(){
+      this.setData({
+        showActivityPop:true
+      })
     }
 })

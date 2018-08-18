@@ -1,4 +1,5 @@
 @import "../../components/Head/wx-head.wxss";
+@import "../../components/Card/Card.wxss";
 .head-wrapper{
   width: 100%;
   height: 415rpx;
@@ -17,16 +18,7 @@
   line-height:52rpx;
   text-indent: 32rpx;
 }
-.card{
-  background:#ffffff;
-  box-shadow:0 10rpx 30rpx 0 rgba(178,192,213,0.30);
-  border-radius:10rpx;
-  width:100%;
-  box-sizing: border-box;
-  height:320rpx;
-  margin-bottom: 26rpx;
-  overflow: hidden;
-}
+
 .card image {
   height: 220rpx;
   width: 100%;
@@ -42,4 +34,7 @@
 .card-wrapper{
   width: 90%;
   margin-top: -130rpx;
+}
+.preload-ing{
+  display: none;
 }

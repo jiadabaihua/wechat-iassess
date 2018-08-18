@@ -1,6 +1,7 @@
 {
   "usingComponents": {
     "head": "../../components/Head/wx-head",
-    "card":"../../components/Card/Card"
+    "card":"../../components/Card/Card",
+    "activityPop":"../../components/ActivityPop/index"
   }
 }

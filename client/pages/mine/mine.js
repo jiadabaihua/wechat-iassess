@@ -17,6 +17,7 @@ Page({
       userInfo: app.globalData.userInfo
     })
     console.log(app.globalData.userInfo)
+   
   },
 
   /**
@@ -30,14 +31,24 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-  
+    wx.setTabBarItem({
+      index: 2,
+      iconPath: "images/mine1.png",
+      selectedIconPath: "images/mine1.png",
+      text: '我的'
+    })
   },
 
   /**
    * 生命周期函数--监听页面隐藏
    */
   onHide: function () {
-  
+    wx.setTabBarItem({
+      index: 2,
+      iconPath: "images/mine.png",
+      selectedIconPath: "images/mine.png",
+      text: '我的'
+    })
   },
 
   /**

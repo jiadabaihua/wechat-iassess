@@ -1,0 +1,17 @@
+<activityPop>
+  <view class='activity-pop' style='display:{{isShow?"block":"none"}}'>
+    <view class='activity-pop-mask'> 
+      <view class='activity-pop-content'>
+        <view class='title'>
+          <text>活动说明</text>
+        </view>
+        <view class='info'>
+          <text >
+            {{activityInfo}}
+          </text>
+        </view>
+      </view>
+       <button bindtap='close'>知道了</button>
+    </view>
+  </view>
+</activityPop>

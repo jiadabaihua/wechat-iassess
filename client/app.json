@@ -1,14 +1,15 @@
 {
   "pages": [
-    "pages/loginByPhoneNum/index",
     "pages/login/index",
     "pages/index/index",
+    
     "pages/material/material",
     "pages/mine/mine",
     "pages/information/index",
     "pages/answerPage/index",
     "pages/reviewPage/index",
-    "pages/user/login"
+    "pages/user/login",
+    "pages/loginByPhoneNum/index"
    
   ],
   "window": {

@@ -5,14 +5,16 @@ var config = require('./config')
 App({
     globalData:{
       userInfo:null,
-      isShowDialog:false
+      isShowDialog:false,
+      loginInfo:{}
     }
-    ,onLaunch: function () {
+    ,onLaunch: function (e) {
+        console.log(e)
         qcloud.setLoginUrl(config.service.loginUrl);
       wx.login({
         success: function (res) {
-          console.log(res)
-          
+          let app = getApp();
+          app.globalData.loginInfo.code = res.code;
         }
       });
     }

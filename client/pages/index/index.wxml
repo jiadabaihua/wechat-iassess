@@ -5,11 +5,17 @@
 
    <template is="header" data="{{...userInfo,componyName:componyName,testName:testName}}"/>
    <view class='card-wrapper'>
-        <view class='test-name'>
+        <!-- <view class='test-name'>
             {{testName}}
-        </view>
+        </view> -->
         <view wx:for-items="{{cardList}}" wx:for-item="card" wx:key='card' class='card-wrap'                   bindtap='enterTest' data-index="{{index}}">
-            <template is="card" data="{{index,...card}}"/>
+            <template bindshowActivityPop="showActivityPop" is="card" data="{{index,...card}}"/>
         </view>
    </view>
+    <view class='preload-ing'>
+      <image src='../../images/mine1.png'></image>
+      <image src='../../images/material1.png'></image>
+      <image src='../../images/activity1.png'></image>
+    </view>
 </view>
+<activityPop activity-info='ddddd' is-show="{{showActivityPop}}"></activityPop>
