@@ -1,4 +1,3 @@
-<!--pages/information/index.wxml-->
 <view class='info-container'>
     <view class='info-container-top'>
         <text class='text' >搜索</text>

@@ -9,7 +9,6 @@ App({
       loginInfo:{}
     }
     ,onLaunch: function (e) {
-        console.log(e)
         qcloud.setLoginUrl(config.service.loginUrl);
       wx.login({
         success: function (res) {

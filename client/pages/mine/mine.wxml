@@ -1,36 +1,13 @@
-<!--pages/mine/mine.wxml-->
-<view class='mine'>
-  <view class='mine-head' tyle="flex-direction:row;">
-    <view class='mine-profile flex-item'>
-         <open-data type="userAvatarUrl" class='user-avatar'></open-data>
-    </view>
-    <view class='flex-item mine-user-info'>
-       <view>{{userInfo.nickName}}</view>
-       <text>欢迎参加北森企业活动</text>
-    </view>
-    <view class='flex-item edit-img'>
-           <image src='../../images/edit2.png'></image> 
-    </view>
-  </view>
-  <view class='other-info'>
-      <view class='other-common' style="flex-direction:row;">
-        <view  class='flex-item'>
-          <image class='m1' src='../../images/m1.png'></image>
-        </view>
-        <view class='flex-item text'>联系客服</view>
-      </view>
-       <view class='other-common' style="flex-direction:row;">
-        <view  class='flex-item'>
-          <image class='m2' src='../../images/m2.png'></image>
-        </view>
-        <view class='flex-item text' style='margin-left:24rpx'>意见反馈</view>
-      </view>
-       <view class='other-common' style="flex-direction:row;">
-        <view  class='flex-item'>
-          <image class='m3' src='../../images/m3.png'></image>
-        </view>
-        <view class='flex-item text' style='border:none;margin-left:24rpx'>关于</view>
-      </view>
-  </view>
+<view wx:if="{{status==1}}">
+    <ShowUserInfo
+      bindeditUserInfo="editUserInfo"
+      nickName="{{userInfo.nickName}}"
+    />
+</view>
+<view wx:elif="{{status==2}}">
+    <EditUserInfo
+      infoLists="{{infoLists}}"
+      nickName="{{userInfo.nickName}}"
+    />
 </view>
 

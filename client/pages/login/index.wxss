@@ -15,6 +15,7 @@
 }  
 .home .btn1{
   margin-top: 200rpx;
+  border-radius: 84rpx;
 }
 .home .btn2{
   margin-top: 80rpx;
