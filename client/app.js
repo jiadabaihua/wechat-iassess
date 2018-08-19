@@ -10,6 +10,7 @@ App({
     }
     ,onLaunch: function (e) {
         qcloud.setLoginUrl(config.service.loginUrl);
+        
       wx.login({
         success: function (res) {
           let app = getApp();

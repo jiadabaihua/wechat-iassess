@@ -31,10 +31,7 @@
   color:#1f2c2a;
   font-family:PingFangSC-Regular;
 }
-.card-wrapper{
-  width: 90%;
-  margin-top: -130rpx;
-}
+
 .preload-ing{
   display: none;
 }

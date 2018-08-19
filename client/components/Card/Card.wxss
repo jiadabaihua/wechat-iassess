@@ -4,7 +4,7 @@
   box-shadow:0 10rpx 30rpx 0 rgba(178,192,213,0.30);
   border-radius:10rpx;
   width:100%;
-  padding-left: 30rpx;
+  padding:0rpx 30rpx;
   box-sizing: border-box;
   min-height:320rpx;
   margin-bottom: 26rpx;
@@ -64,4 +64,20 @@
 }
 .card .activity-des{
   margin-right: 94rpx;
+}
+.card .alert-time{
+  font-family:PingFangSC-Medium;
+  font-size:26rpx;
+  color:#8bc3b9;
+  line-height:40rpx;
+  text-align:left;
+  padding: 20rpx 0rpx;
+  border-top: 1px dashed  #cfd4e1;
+  margin-top: 30rpx;
+  display: flex;
+  flex-direction: row;
+}
+.card-wrapper{
+  width: 90%;
+  margin-top: -130rpx;
 }

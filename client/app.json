@@ -3,6 +3,7 @@
     
     "pages/login/index",
     "pages/index/index",
+    "pages/siteTo/index",
     "pages/material/material",
      "pages/mine/mine",
     "pages/information/index",
