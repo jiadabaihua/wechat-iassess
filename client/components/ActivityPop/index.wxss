@@ -44,5 +44,7 @@
   letter-spacing:1rpx;
   text-align:center;
   line-height:46rpx;
-  padding: 40rpx 60rpx 0;
+  padding: 40rpx 60rpx ;
+  height: 330rpx;
+  overflow:scroll;
 }

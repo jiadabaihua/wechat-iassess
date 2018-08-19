@@ -7,7 +7,9 @@ App({
       userInfo:null,
       isShowDialog:false,
       loginInfo:{},
-      dataList:{}
+      dataList:{},
+      isFromHome:false,
+      commonInfo:{}
     }
     ,onLaunch: function (e) {
         qcloud.setLoginUrl(config.service.loginUrl);

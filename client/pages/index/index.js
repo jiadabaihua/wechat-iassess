@@ -14,12 +14,12 @@ Page({
         activityInfo:"",
         cardList:[{
           activityName:'调节他人情绪',
-          description:"情绪自我修复指采取有效的方法和策略，快速有效地处理焦虑、沮丧等消极情绪。情绪自我修复能力强的人在工作和生活中很少受到情绪的干扰，以分析问题、解决问题为重。",
+          description:"情绪自我修复指采取有效的方法和策略，快速有效地处理焦虑、沮丧等消极情绪。情绪自我修复能力强的人在工作和生活中很少受到情绪的干扰，以分析问题、解决问题为重。情绪自我修复指采取有效的方法和策略，快速有效地处理焦虑、沮丧等消极情绪。情绪自我修复能力强的人在工作和生活中很少受到情绪的干扰，以分析问题、解决问题为重。",
           testName:'没有委屈的生活，只有玻璃心的你',
           status:1,   //0 未开始 1 进行中 2 已完成
           startTime:'2018/06/01 14:00',
           endTiem:'2018/06/01 14:00',
-          isShowAlert:true,
+          isShowAlert:false,
           remindData: '2018/06/02',
           remindTime: '14:00',
           answerUrl: 'https://mp.weixin.qq.com/'
@@ -53,8 +53,21 @@ Page({
         method: "POST",
         success: function (res) {
           console.log(res.data)
+          // let copyObj = Object.assign({}, res.data);
+          // copyObj[0].remindData = res.data[0].startTime.split(" ")[0];
+          // copyObj[0].remindTime = res.data[0].startTime.split(" ")[1];
+          // console.log(copyObj);
+          let newArr =  res.data.map(
+            (item,index)=>{
+              // let copuObj = Object.assign({},item);
+              item.remindData = item.startTime.split(" ")[0];
+              item.remindTime = item.startTime.split(" ")[1].slice(0, 5);
+              return item;
+            }
+          )
+          console.log(newArr)
           that.setData({
-            // cardList: res.data
+            cardList: newArr
           })
         }
       })
@@ -451,8 +464,11 @@ Page({
     })
   },
   editInfo(){
-    wx.navigateTo({
-      // url: `../siteTo/index`,
+    app.globalData.isFromHome = true;
+    wx.switchTab({
+      url: "../mine/mine",
+      success:function(){
+      }
     })
   }
 })

@@ -1,4 +1,5 @@
 // pages/mine/mine.js
+let app = getApp();
 Page({
 
   /**
@@ -79,12 +80,9 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    let app = getApp();
     this.setData({
       userInfo: app.globalData.userInfo
     })
-    console.log(app.globalData.userInfo)
-
   },
   editUserInfo: function () {
     this.setData({ status: 2 })
@@ -100,6 +98,11 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
+    let status = app.globalData.isFromHome ? 2 : 1;
+    console.log(app.globalData.isFromHome)
+    this.setData({
+      status: status
+    })
     wx.setTabBarItem({
       index: 2,
       iconPath: "images/mine1.png",
@@ -117,7 +120,8 @@ Page({
       iconPath: "images/mine.png",
       selectedIconPath: "images/mine.png",
       text: '我的'
-    })
+    });
+    app.globalData.isFromHome=false;
   },
 
   /**

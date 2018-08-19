@@ -23,10 +23,10 @@ Page({
         },
         method:"POST",
         success: function (res) {
-          console.log(res)
-          app.globalData.dataList.tenantId = res.tenantId; 
-          app.globalData.dataList.beisenUserId = res.beisenUserId; 
-          
+          app.globalData.commonInfo = res.data;
+          console.log(app.globalData.commonInfo)
+          app.globalData.dataList.TenantId = res.data.TenantId; 
+          app.globalData.dataList.beisenUserId = res.data.beisenUserId; 
           wx.switchTab({
             url: "../index/index"
           })
@@ -45,7 +45,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    app.globalData.loginInfo.snEncryption64 = 'Y7EqcScGCbaMzxcChina250JcIiTuE2eyFN3bNHXhXWlw';
+    app.globalData.loginInfo.snEncryption64 = 'Y7EqcScGCbaMzxcChina250I2NFoUWlTbmgw6pw6dw5of';
     wx.getUserInfo({
       success:function(e){
         let app = getApp();
