@@ -1,7 +1,8 @@
 {
   "pages": [
-    "pages/login/index",
     "pages/index/index",
+    "pages/login/index",
+    
     "pages/siteTo/index",
     
     "pages/material/material",

@@ -5,7 +5,7 @@
     <view class='user-info'>
          <open-data type="userAvatarUrl" class='user-avatar'></open-data>
     </view>
-    <view class='edit-btn'>
+    <view class='edit-btn' bindtap='editInfo'>
           <image src='../../images/edit.png'></image>
     </view>
     <view class='user-name'>

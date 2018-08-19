@@ -6,10 +6,10 @@ App({
     globalData:{
       userInfo:null,
       isShowDialog:false,
-      loginInfo:{}
+      loginInfo:{},
+      dataList:{}
     }
     ,onLaunch: function (e) {
-        console.log(e)
         qcloud.setLoginUrl(config.service.loginUrl);
         
       wx.login({

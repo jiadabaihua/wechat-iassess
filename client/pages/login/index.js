@@ -1,4 +1,5 @@
 // pages/home/index.js
+let app = getApp();
 Page({
 
   /**
@@ -8,7 +9,6 @@ Page({
   
   },
   getPhoneNumber: function (e) {
-    let app = getApp();
     app.globalData.loginInfo.phoneNumber ={
       encryptedData: e.detail.encryptedData,
       iv: e.detail.iv
@@ -23,7 +23,10 @@ Page({
         },
         method:"POST",
         success: function (res) {
-          console.log(res.data)
+          console.log(res)
+          app.globalData.dataList.tenantId = res.tenantId; 
+          app.globalData.dataList.beisenUserId = res.beisenUserId; 
+          
           wx.switchTab({
             url: "../index/index"
           })
@@ -42,7 +45,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    console.log(options)
+    app.globalData.loginInfo.snEncryption64 = 'Y7EqcScGCbaMzxcChina250JcIiTuE2eyFN3bNHXhXWlw';
     wx.getUserInfo({
       success:function(e){
         let app = getApp();

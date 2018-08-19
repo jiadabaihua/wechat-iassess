@@ -19,8 +19,9 @@ Page({
           status:1,   //0 未开始 1 进行中 2 已完成
           startTime:'2018/06/01 14:00',
           endTiem:'2018/06/01 14:00',
-          isShowAlert:false,
-          remind: '2018/06/02',
+          isShowAlert:true,
+          remindData: '2018/06/02',
+          remindTime: '14:00',
           answerUrl: 'https://mp.weixin.qq.com/'
         }, 
         {
@@ -36,14 +37,27 @@ Page({
         }],
         showActivityPop:false
     },
-    onLoad: function () {
-      
+  onLoad: function (options) {
+     let that = this;
       this.setData({
         hasUserInfo: true,
         userInfo: app.globalData.userInfo
       })
-      // this.getUserInfo();
-      // 查看是否授权
+      
+      wx.request({
+        url: 'http://dyhzjbeisen.ceping.com/Activity/GetActivityList ', //仅为示例，并非真实的接口地址
+        data: app.globalData.dataList,
+        header: {
+          'content-type': 'application/json' // 默认值
+        },
+        method: "POST",
+        success: function (res) {
+          console.log(res.data)
+          that.setData({
+            // cardList: res.data
+          })
+        }
+      })
     },
     enterTest:function(e){
       var index = e.currentTarget.dataset.index ;
@@ -419,10 +433,26 @@ Page({
       let index = e.currentTarget.dataset.id
       //  let newObj1 = Object.assign({}, this.data.cardList[index])
       let arr = this.data.cardList;
-      arr[index].remind = e.detail.value.replace(/-/g,'/');
+      arr[index].remindData = e.detail.value.replace(/-/g,'/');
       //  let newObj = Object.assign({},this)
       this.setData({
         cardList: arr
       })
-    }
+    },
+  bindTimeChange(e){
+    
+    let index = e.currentTarget.dataset.id
+    //  let newObj1 = Object.assign({}, this.data.cardList[index])
+    let arr = this.data.cardList;
+    arr[index].remindTime = e.detail.value;
+    //  let newObj = Object.assign({},this)
+    this.setData({
+      cardList: arr
+    })
+  },
+  editInfo(){
+    wx.navigateTo({
+      // url: `../siteTo/index`,
+    })
+  }
 })
