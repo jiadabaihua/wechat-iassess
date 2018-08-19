@@ -1,4 +1,15 @@
-<!--pages/material/material.wxml-->
-<view class='no-data'>
+<view wx:if="{{materialLists.length>0}}">
+  <view wx:for-items="{{materialLists}}" wx:for-item="list" wx:key='list'>
+    <List 
+      id="{{list.id}}"
+      thumbnail="{{list.thumbnail}}"
+      title="{{list.title}}"
+      introduce="{{list.introduce}}"
+      link="{{list.link}}"
+    />
+  </view>
+</view>
+
+<view wx:else class='no-data'>
    <image class='ziliao' src='../../images/ziliao.svg'></image>
 </view>

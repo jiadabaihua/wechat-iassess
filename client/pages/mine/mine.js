@@ -5,7 +5,74 @@ Page({
    * 页面的初始数据
    */
   data: {
-    userInfo: {}
+    userInfo: {},
+    status: 1,  //1,展示个人信息，2编辑个人信息
+    infoLists: [{
+      label: '姓名',
+      fieldName:'name',
+      required: true,
+      fieldType: "text"
+    }, {
+      label: '性别',
+      fieldName: 'sex',
+      required: true,
+      fieldType: "picker",
+      mode: "selector",
+      source: [{
+        value: 0,
+        text: "请选择"
+      }, {
+        value: 1,
+        text: "男"
+      }, {
+        value: 2,
+        text: "女"
+      }]
+    }, {
+      label: '出生日期',
+      fieldName: 'date',
+      required: true,
+      fieldType: "picker",
+      mode: "date",
+      value: "2018.8.18"
+    }, {
+      label: '学历',
+      fieldName: 'education',
+      required: true,
+      fieldType: "picker",
+      mode: "selector",
+      source: [{
+        value: 0,
+        text: "请选择"
+      }, {
+        value: 1,
+        text: "小学"
+      }, {
+        value: 2,
+        text: "初中"
+      }, {
+        value: 3,
+        text: "高中"
+      }, {
+        value: 4,
+        text: "中技（中专/技校/职高）"
+      }, {
+        value: 5,
+        text: "大专"
+      }, {
+        value: 6,
+        text: "本科"
+      }, {
+        value: 7,
+        text: "硕士研究生"
+      }, {
+        value: 8,
+        text: "MBA"
+      }, {
+        value: 9,
+        text: "博士研究生"
+      }]
+    }]
   },
 
   /**
@@ -17,14 +84,16 @@ Page({
       userInfo: app.globalData.userInfo
     })
     console.log(app.globalData.userInfo)
-   
-  },
 
+  },
+  editUserInfo: function () {
+    this.setData({ status: 2 })
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-  
+
   },
 
   /**
@@ -55,27 +124,27 @@ Page({
    * 生命周期函数--监听页面卸载
    */
   onUnload: function () {
-  
+
   },
 
   /**
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh: function () {
-  
+
   },
 
   /**
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
-  
+
   },
 
   /**
    * 用户点击右上角分享
    */
   onShareAppMessage: function () {
-  
+
   }
 })

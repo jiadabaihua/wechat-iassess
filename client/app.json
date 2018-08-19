@@ -1,18 +1,17 @@
 {
   "pages": [
-    "pages/index/index",
+    
     "pages/login/index",
+    "pages/index/index",
     
     "pages/siteTo/index",
-    
     "pages/material/material",
-    "pages/mine/mine",
+     "pages/mine/mine",
     "pages/information/index",
     "pages/answerPage/index",
     "pages/reviewPage/index",
-    "pages/user/login",
-    "pages/loginByPhoneNum/index"
-   
+    "pages/loginByPhoneNum/index",
+    "pages/link/index"
   ],
   "window": {
     "backgroundColor": "#F6F6F6",

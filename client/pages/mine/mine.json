@@ -1,1 +1,6 @@
-{}
+{
+  "usingComponents":{
+    "ShowUserInfo":"../../components/ShowUserInfo/index",
+    "EditUserInfo":"../../components/EditUserInfo/index"
+  }
+}

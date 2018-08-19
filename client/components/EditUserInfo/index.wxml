@@ -1,0 +1,70 @@
+<view class='user-info-page'>
+  <view class='head'>
+    <view class='avatar'>
+      <open-data type="userAvatarUrl" class='user-avatar'></open-data>
+    </view>
+    <text>{{nickName}}</text>
+    <view class='modify-phone' bindtap='modifyPhone'>修改账号</view>
+  </view>
+  <view class='edit-content'>
+      <view class='eidt-theme'>
+          <view class='left-line'></view>
+          <text>必填信息</text>
+      </view>
+        <view wx:for-items="{{infoLists}}" wx:for-item="field" wx:key='field'>
+          <view wx:if="{{field.fieldType =='text'}}" class='field-comp'>
+              <view class="field-label">
+                  <text wx-if="{{field.required}}" style='color:#d43333'>*</text>
+                  <text style='color:#1f2c2a;'>{{field.label}}</text>
+              </view>
+              <view class='field-control'>
+                  <input value="dddd"/>
+              </view>
+          </view>
+
+          <view wx:if="{{field.fieldType =='picker'}}" class='field-comp'>
+              <view class="field-label">
+                  <text wx-if="{{field.required}}" style='color:#d43333'>*</text>
+                  <text style='color:#1f2c2a;'>{{field.label}}</text>
+              </view>
+              <view class='field-control'>
+                 <picker wx:if="{{field.mode=='selector' && field.fieldName=='sex'}}"             
+                          bindchange="bindrChangeSex" 
+                          mode="{{field.mode}}"
+                          range="{{field.source}}"
+                          index="{{field.fieldName}}"
+                          range-key="text">
+                    <view >
+                        {{field.source[sex].text}}
+                    </view>
+                 </picker>
+                <picker wx:if="{{field.mode=='selector' && field.fieldName=='education'}}" 
+                          bindchange="bindrChangeEducation" 
+                          mode="{{field.mode}}"
+                          range="{{field.source}}"
+                          index="{{field.fieldName}}"
+                          range-key="text">
+                    <view >
+                        {{field.source[education].text}}
+                    </view>
+                </picker>
+                <picker wx:if="{{field.mode=='date'}}" bindchange="bindChangeDate" 
+                          data-field="{{field.fieldName}}"
+                          mode="{{field.mode}}"
+                          value="{{field.value}}"
+                          range="{{field.source}}"
+                          index="{{index}}"
+                          range-key="text">
+                    <view >
+                        {{date}}
+                    </view>
+                </picker>
+
+              </view>
+          </view>
+    </view>
+  </view>
+  <view class='submit-btn' bindtap='submit'>
+      保存
+  </view>
+</view>

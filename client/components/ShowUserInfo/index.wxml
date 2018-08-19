@@ -1,0 +1,28 @@
+<view class='mine'>
+  <view class='mine-head' tyle="flex-direction:row;">
+    <view class='mine-profile flex-item'>
+         <open-data type="userAvatarUrl" class='user-avatar'></open-data>
+    </view>
+    <view class='flex-item mine-user-info'>
+       <view>{{nickName}}</view>
+       <text>欢迎参加北森企业活动</text>
+    </view>
+    <view class='flex-item edit-img' bindtap='editUserInfo'>
+           <image src='../../images/edit2.png'></image> 
+    </view>
+  </view>
+  <view class='other-info'>
+      <view class='other-common' style="flex-direction:row;">
+        <view  class='flex-item'>
+          <image class='m1' src='../../images/m1.png'></image>
+        </view>
+        <view class='flex-item text' bindtap='makePhoneCall'>联系客服</view>
+      </view>
+       <view class='other-common' style="flex-direction:row;">
+        <view  class='flex-item'>
+          <image class='m3' src='../../images/m3.png'></image>
+        </view>
+        <view class='flex-item text' style='border:none;margin-left:24rpx'>关于</view>
+      </view>
+  </view>
+</view>

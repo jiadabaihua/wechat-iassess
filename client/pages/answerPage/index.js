@@ -1,8 +1,7 @@
 var data = require('../../utils/data.js');
 var normalImg ='http://stnew03.beisen.com/ux/landing-site/release/dist/images/3115865b.deition.svg';
 var getActiveListObj=function(index){
-  index += getApp().globalData.cardIndex==0?0:3;
-  console.log(index)
+  index += getApp().globalData.cardIndex == 0 ? 0 : 3;
   return {
     qid: data.talkLists[index].qid,
     mid: data.talkLists[index].mid,

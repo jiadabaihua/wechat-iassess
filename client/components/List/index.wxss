@@ -1,0 +1,23 @@
+.thumbnail{
+  width: 56px;
+  height: 56px;
+  flex: 0 0 56px;
+  margin-right: 8px;
+}
+.list{
+  display: flex;
+  box-sizing:border-box;
+  padding:15px;
+  border-bottom:1px solid #e0e0e0;
+}
+.title{
+  font-size: 16px;
+  color:#35413f;
+  line-height: 23px;
+}
+.introduce{
+  font-size: 14px;
+  color:#79817f;
+  text-align:justify;
+  line-height: 20px;
+}

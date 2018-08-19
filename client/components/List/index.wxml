@@ -1,0 +1,7 @@
+<view class='list' bindtap="jumpToDetail" data-link="{{link}}">
+  <image src='{{thumbnail}}' class='thumbnail'></image>
+  <view class='text'>
+      <view class='title'>{{title}}</view>
+      <view class='introduce'>{{introduce}}</view>
+  </view>
+</view>

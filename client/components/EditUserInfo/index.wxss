@@ -1,0 +1,77 @@
+page{
+  background: #f7f6fd;
+}
+.user-info-page .avatar{
+  height: 45px;
+  width: 45px;
+  border-radius: 100%;
+  overflow: hidden;
+}
+.user-info-page .head{
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+  padding: 18px 15px;
+  border-top: 1px solid #bcc1cf;
+  background: #fff;
+}
+.modify-phone{
+  width:100px;
+  height:30px;
+  color: #a4aabc;
+  font-size: 14px;
+  text-align: center;
+  line-height: 30px;
+  border:1px solid #e7e9f0;
+  border-radius:20px;
+  margin-top: 5px;
+}
+.edit-content{
+  box-sizing: border-box;
+  padding: 11px 22px;
+  background: #fff;
+}
+.eidt-theme{
+  font-size:14px;
+  color:#1f2c2a;
+  padding: 3px 0;
+  border-bottom: 2px solid #eeecfc;
+}
+.field-label{
+  font-size: 14px;
+}
+.field-comp{
+  margin-top: 11px;
+}
+.left-line{
+  background:#2acfb3;
+  border-radius:2px;
+  width:4px;
+  height:12px;
+  margin-right: 3px;
+  display: inline-block;
+}
+.field-control{
+  background:#f7f6fd;
+  border:1px solid #e0deea;
+  border-radius:8px;
+  padding: 7px 9px;
+  font-family:PingFangSC-Regular;
+  font-size:14px;
+  color:#79817f;
+  margin-top: 5px;
+}
+.field-control picker{
+  padding: 3px;
+}
+.submit-btn{
+  background:#2acfb3;
+  width:260rpx;
+  height:84rpx;
+  line-height:84rpx;
+  border-radius:84rpx;
+  color: #fff;
+  font-size:30rpx;
+  text-align: center;
+  margin: 15px auto;
+}

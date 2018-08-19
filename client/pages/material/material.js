@@ -5,7 +5,25 @@ Page({
    * 页面的初始数据
    */
   data: {
-  
+    materialLists:[{
+      id:"m1",
+ thumbnail:"https://goss.veer.com/creative/vcg/veer/800water/veer-141940798.jpg",
+      title:"一带一路只是学习",
+      introduce:"中国政府一带一路知识学习，包含地方大幅度辅导辅导放到放到",
+      link:"http://dyhzjbeisen.ceping.com/1.pdf"
+    }, {
+        id: "m2",
+        thumbnail: "https://goss.veer.com/creative/vcg/veer/800water/veer-141940798.jpg",
+        title: "一带一路只是学习",
+        introduce: "中国政府一带一路知识学习，包含地方大幅度辅导辅导放到放到",
+        link: "http://dyhzjbeisen.ceping.com"
+      }, {
+        id: "m3",
+        thumbnail: "https://goss.veer.com/creative/vcg/veer/800water/veer-141940798.jpg",
+        title: "一带一路只是学习",
+        introduce: "中国政府一带一路知识学习，包含地方大幅度辅导辅导放到放到",
+        link: "http://dyhzjbeisen.ceping.com"
+      }]
   },
 
   /**
