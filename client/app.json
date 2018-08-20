@@ -1,9 +1,9 @@
 {
   "pages": [
-    "pages/rankingPage/index",
+    
     "pages/login/index",
     "pages/index/index",
-    
+    "pages/rankingPage/index",
     "pages/siteTo/index",
     "pages/material/material",
     "pages/mine/mine",

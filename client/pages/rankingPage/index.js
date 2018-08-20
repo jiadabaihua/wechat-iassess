@@ -55,7 +55,9 @@ Page({
    */
   onLoad: function (options) {
     const app = getApp();
-
+    if (app.globalData.userInfo){
+      this.setData({ userInfo: app.globalData.userInfo})
+    }
   },
 
   /**

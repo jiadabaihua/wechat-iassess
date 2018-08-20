@@ -4,7 +4,7 @@
           <open-data type="userAvatarUrl" class='user-avatar'></open-data>
       </view>
       <view class='result-wrapper'>
-          <view class='user-name'>{{nickName || "焉浪"}}</view>
+          <view class='user-name'>{{userInfo.nickName || "焉浪"}}</view>
           <view class='record'>
               <view class='ranking'>
                 <view>排名</view>
