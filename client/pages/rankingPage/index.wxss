@@ -5,7 +5,6 @@ page{
   background: #fff;
   box-sizing: border-box;
   padding: 18px 15px;
-  margin-bottom: 11px;
   display: flex;
 }
 .avatar{
@@ -17,22 +16,59 @@ page{
 }
 .result-wrapper{
   margin-left: 15px;
+  display: flex;
   flex: 1;
 }
 .control-btns{
-  flex: 1;
-  display: flex;
+  background: #fff;
+  font-family:PingFangSC-Regular;
+  font-size:24rpx;
+  color:#79817f;
+  padding: 22px 0 ;
+  margin-bottom: 11px;
+  border-top: 1px solid #dadada;
+  border-bottom: 1px solid #dadada;
+}
+.share-btn,.praise-btn{
+ width: 45%;
+ text-align: center;
+ display: inline-block;
+}
+.share-btn image,.praise-btn image{
+  width: 15px;
+  height: 15px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 5px;
+}
+.control-btns button::after,.praise{
+  display: inline-block;
+  border:none;
+  background-color: none;
+  line-height: 30px;
+}
+
+.share{
+  font-size:24rpx;
+  color:#79817f;
+  background: none;
+  text-align: left;
+  padding: 0;
+  display: inline-block;
+  vertical-align: middle;
 }
 .record{
   display: flex;
 }
-.share,.ranking,.praise,.score{
+.ranking,.score,.record{
   flex: 1;
 }
 .user-name{
   font-family:PingFangSC-Regular;
   font-size:17px;
   color:#1f2c2a;
+  flex: 0 0 80px;
+  margin-top: 15px;
 }
 .ranking view:first-child,
 .score view:first-child{

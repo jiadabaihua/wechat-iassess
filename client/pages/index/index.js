@@ -47,8 +47,7 @@ Page({
       })
       
       wx.request({
-        url: 'http://dyhzjbeisen.ceping.com/Activity/GetActivityList ', 
-        // url: 'http://dyhzjbeisen.ceping.com.cn/Activity/GetActivityList ', 
+        url: 'http://dyhzjbeisen.ceping.com.cn/Activity/GetActivityList', 
         data: app.globalData.dataList,
         header: {
           'content-type': 'application/json' // 默认值

@@ -13,6 +13,7 @@ Page({
       encryptedData: e.detail.encryptedData,
       iv: e.detail.iv
     }
+    
     let data = Object.assign({}, app.globalData.loginInfo )
     if (e.detail.errMsg.includes("ok")){
       wx.request({

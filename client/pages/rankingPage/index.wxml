@@ -16,11 +16,18 @@
               </view>
           </view>
       </view>
-      <view class='control-btns'>
-            <view class='share' >分享</view>
-            <view class='praise' bind:tap="eventDraw">点赞</view>
-          </view>
+      
     </view>
+    <view class='control-btns'>
+            <view class='share-btn'>
+                <image src='/images/cb3.svg'></image>
+                <button class='share' open-type="share">分享到朋友圈</button>
+            </view>
+            <view class='praise-btn'>
+                <image src='/images/4.png'></image>
+                <view class='praise' bind:tap="eventDraw">生成专属成就</view>
+            </view>
+      </view>
     <view class='content'>
       <view class='title'>
         群内排行榜
@@ -41,7 +48,7 @@
   <image src="{{shareImage}}" class="share-image"></image>
   <view>
     <button bind:tap="eventSave" class='save-image-btn'>存</button>
-    <!-- <button bind:tap="close" class='close'>X</button> -->
+    <button bind:tap="close" class='close'>X</button>
   </view>
 </view>
 
