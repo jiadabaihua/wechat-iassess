@@ -16,7 +16,7 @@ Page({
     let data = Object.assign({}, app.globalData.loginInfo )
     if (e.detail.errMsg.includes("ok")){
       wx.request({
-        url: 'http://dyhzjbeisen.ceping.com/home/Login ', //仅为示例，并非真实的接口地址
+        url: 'http://dyhzjbeisen.ceping.com.cn/home/Login ', 
         data: data,
         header: {
           'content-type': 'application/json' // 默认值

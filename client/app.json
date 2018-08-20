@@ -1,6 +1,6 @@
 {
   "pages": [
-    "pages/rankingPage/index",
+    
     "pages/login/index",
     "pages/index/index",
     
@@ -12,8 +12,8 @@
     "pages/reviewPage/index",
     "pages/loginByPhoneNum/index",
     "pages/link/index",
-    "pages/about/index"
-    
+    "pages/about/index",
+    "pages/rankingPage/index"
    
     
   ],
