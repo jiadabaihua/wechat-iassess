@@ -63,7 +63,7 @@
   margin-right: 15rpx;
 }
 .card .activity-des{
-  margin-right: 94rpx;
+  /* margin-right: 94rpx; */
 }
 .card .alert-time{
   font-family:PingFangSC-Medium;
@@ -89,4 +89,7 @@
 .card .set-data{
   position: absolute;
   bottom: 20rpx;
+}
+.control-btn{
+  flex: 1;
 }

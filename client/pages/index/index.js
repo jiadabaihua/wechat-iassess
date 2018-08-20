@@ -12,29 +12,31 @@ Page({
         componyName:'北森云计算股份有限公司',
         testName:'情商小剧场',
         activityInfo:"",
-        cardList:[{
-          activityName:'调节他人情绪',
-          description:"情绪自我修复指采取有效的方法和策略，快速有效地处理焦虑、沮丧等消极情绪。情绪自我修复能力强的人在工作和生活中很少受到情绪的干扰，以分析问题、解决问题为重。情绪自我修复指采取有效的方法和策略，快速有效地处理焦虑、沮丧等消极情绪。情绪自我修复能力强的人在工作和生活中很少受到情绪的干扰，以分析问题、解决问题为重。",
-          testName:'没有委屈的生活，只有玻璃心的你',
-          status:1,   //0 未开始 1 进行中 2 已完成
-          startTime:'2018/06/01 14:00',
-          endTiem:'2018/06/01 14:00',
-          isShowAlert:false,
-          remindData: '2018/06/02',
-          remindTime: '14:00',
-          answerUrl: 'https://mp.weixin.qq.com/'
-        }, 
-        {
-          activityName: '情绪自我修复',
-          description: "调节他人情绪指采取有效的方法使他人从消极的情绪中脱离出来，重新获得力量。调节他人情绪能力强的人愿意倾听他人的感受，会积极表达自己的关心与想法并帮助他人走出困境。",
-          testName: '别让你的人际关系输在起跑线上',
-          status: 2,   //0 未开始 1 进行中 2 已完成
-          startTime: '2018/06/01 14:00',
-          endTiem: '2018/06/01 14:00',
-          isShowAlert: false,
-          remind: '2018/06/02',
-          answerUrl:'https://mp.weixin.qq.com/'
-        }],
+        cardList:[
+        //   {
+        //   activityName:'调节他人情绪',
+        //   description:"情绪自我修复指采取有效的方法和策略，快速有效地处理焦虑、沮丧等消极情绪。情绪自我修复能力强的人在工作和生活中很少受到情绪的干扰，以分析问题、解决问题为重。情绪自我修复指采取有效的方法和策略，快速有效地处理焦虑、沮丧等消极情绪。情绪自我修复能力强的人在工作和生活中很少受到情绪的干扰，以分析问题、解决问题为重。",
+        //   testName:'没有委屈的生活，只有玻璃心的你',
+        //   status:1,   //0 未开始 1 进行中 2 已完成
+        //   startTime:'2018/06/01 14:00',
+        //   endTiem:'2018/06/01 14:00',
+        //   isShowAlert:false,
+        //   remindData: '2018/06/02',
+        //   remindTime: '14:00',
+        //   answerUrl: 'https://mp.weixin.qq.com/'
+        // }, 
+        // {
+        //   activityName: '情绪自我修复',
+        //   description: "调节他人情绪指采取有效的方法使他人从消极的情绪中脱离出来，重新获得力量。调节他人情绪能力强的人愿意倾听他人的感受，会积极表达自己的关心与想法并帮助他人走出困境。",
+        //   testName: '别让你的人际关系输在起跑线上',
+        //   status: 2,   //0 未开始 1 进行中 2 已完成
+        //   startTime: '2018/06/01 14:00',
+        //   endTiem: '2018/06/01 14:00',
+        //   isShowAlert: false,
+        //   remind: '2018/06/02',
+        //   answerUrl:'https://mp.weixin.qq.com/'
+        // }
+        ],
         showActivityPop:false
     },
   onLoad: function (options) {
@@ -45,7 +47,7 @@ Page({
       })
       
       wx.request({
-        url: 'http://dyhzjbeisen.ceping.com/Activity/GetActivityList ', //仅为示例，并非真实的接口地址
+        url: 'http://dyhzjbeisen.ceping.com/Activity/GetActivityList ', 
         data: app.globalData.dataList,
         header: {
           'content-type': 'application/json' // 默认值
@@ -71,6 +73,9 @@ Page({
           })
         }
       })
+      wx.setNavigationBarTitle({
+        title: '北森小测评',
+      })
     },
     enterTest:function(e){
       var index = e.currentTarget.dataset.index ;
@@ -93,6 +98,11 @@ Page({
           fail: function (res) { 
 
           }
+      })
+    },
+    goToRankingPage:function(){
+      wx.navigateTo({
+        url: '../rankingPage/index',
       })
     },
     getUserInfo: function () {

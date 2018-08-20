@@ -30,7 +30,37 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+    let that=this;
+    const app=getApp();
+    const { TenantId, ActivityId} = app.globalData.commonInfo;
+    wx.request({
+      url: 'http://dyhzjbeisen.ceping.com/Activity/GetActivityFile ',
+      data: { tenantId: TenantId, activityId: ActivityId},
+      header: {
+        'content-type': 'application/json' // 默认值
+      },
+      method: "POST",
+      success: function (res) {
+        if (res.errMsg =="request:ok"){
+          const data = res.data.map(item => {
+            return {
+              id: item.fileId,
+              link: "http://dyhzjbeisen.ceping.com" + item.filePath,
+              thumbnail: "http://dyhzjbeisen.ceping.com" + item.fileimg,
+              title: item.fileName,
+              introduce: item.fileDes
+            }
+          })
+
+          that.setData({
+            materialLists: data
+          })
+        }
+      }
+    })
+    wx.setNavigationBarTitle({
+      title: '资料',
+    })
   },
 
   /**

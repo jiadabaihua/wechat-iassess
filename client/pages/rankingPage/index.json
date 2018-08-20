@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "List": "../../components/RankList/index",
+    "canvasdrawer": "/components/canvasdrawer/canvasdrawer"
+  }
+}

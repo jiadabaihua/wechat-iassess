@@ -1,0 +1,34 @@
+.list{
+  display: flex;
+  box-sizing: border-box;
+  padding: 30px 20px 0;
+  background: #fff;
+}
+.ico{
+  width: 30px;
+  height: 30px;
+  margin:13px 5px 0;
+}
+.order{
+  font-family:PingFangSC-Semibold;
+  font-size:14px;
+  color:#b0b4c4;
+  line-height: 50px;
+  margin:0 5px 0;
+}
+.avatar{
+  flex: 0 0 52px;
+  height: 52px;
+  border-radius: 100%;
+  margin-right: 30px;
+}
+.score,.name{
+  flex: 1;
+  line-height: 50px;
+  font-family:PingFangSC-Regular;
+  font-size:15px;
+  color:#1f2c2a;
+}
+.score{
+  text-align: right;
+}

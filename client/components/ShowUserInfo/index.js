@@ -4,14 +4,16 @@ Component({
    * 组件的属性列表
    */
   properties: {
-
+    phoneNumber:{
+      type:String
+    }
   },
 
   /**
    * 组件的初始数据
    */
   data: {
-
+    
   },
 
   /**
@@ -24,6 +26,11 @@ Component({
     ,makePhoneCall: function () {
       wx.makePhoneCall({
         phoneNumber: "4006506886"
+      })
+    }
+    , goToAbout:function(){
+      wx.navigateTo({
+        url: '../../pages/about/index',
       })
     }
   }

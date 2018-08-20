@@ -1,0 +1,5 @@
+<view class='content'>
+  <image src='../../images/logo.svg' alt="logo"></image>
+  <view class='version'>北森测评V1.0</view>
+  <view  class='footer'>© 2018 北森云计算股份有限公司. All Rights Reserved.</view>
+</view>

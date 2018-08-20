@@ -1,0 +1,9 @@
+<view class='list'>
+  <image class='ico' wx:if="{{order<4}}" src="{{level}}"></image>
+  <text class='order' wx:if="{{order >=4}}">{{order<10 ? (0+""+order) : order}}</text>
+  <image class="avatar" src="{{avatar}}"></image>
+  <text class='name'>{{name}}</text>
+  <view class='score'>
+    <text style='color:#f98f55;margin-right:5px'>{{score}}</text>分
+  </view>
+</view>

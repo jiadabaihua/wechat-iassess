@@ -19,13 +19,17 @@
         </view>
       </view>
       <view class='card-bottom'>
-        <view catchtap='showActivityPop' data-info="{{description}}" class='activity-des'>
+        <view catchtap='showActivityPop' data-info="{{description}}" class='activity-des control-btn'>
           <image src='../../images/cb1.png'></image>
           <text>活动说明</text>
         </view>
-        <view data-id="{{index}}" catchtap='showAlert'>
+        <view data-id="{{index}}" catchtap='showAlert' class='control-btn'>
           <image src='../../images/cb2.png'></image>
           <text>设置提醒</text>
+        </view>
+        <view data-id="{{index}}" catchtap='goToRankingPage' class='control-btn'>
+          <image src='../../images/cb3.svg'></image>
+          <text>排行榜</text>
         </view>
       </view>
       <view class='alert-time' style='display:{{isShowAlert?"block":"none"}}'>

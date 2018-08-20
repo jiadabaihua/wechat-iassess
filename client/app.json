@@ -1,23 +1,27 @@
 {
   "pages": [
-    
+    "pages/rankingPage/index",
     "pages/login/index",
     "pages/index/index",
     
     "pages/siteTo/index",
     "pages/material/material",
-     "pages/mine/mine",
+    "pages/mine/mine",
     "pages/information/index",
     "pages/answerPage/index",
     "pages/reviewPage/index",
     "pages/loginByPhoneNum/index",
-    "pages/link/index"
+    "pages/link/index",
+    "pages/about/index"
+    
+   
+    
   ],
   "window": {
     "backgroundColor": "#F6F6F6",
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#F6F6F6",
-    "navigationBarTitleText": "情商小剧场",
+    "navigationBarTitleText": "",
     "navigationBarTextStyle": "black"
   },
   "tabBar": {

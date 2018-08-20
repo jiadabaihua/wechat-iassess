@@ -22,7 +22,10 @@
         <view  class='flex-item'>
           <image class='m3' src='../../images/m3.png'></image>
         </view>
-        <view class='flex-item text' style='border:none;margin-left:24rpx'>关于</view>
+        <view 
+            class='flex-item text' 
+            style='border:none;margin-left:24rpx'
+            bindtap='goToAbout'>关于</view>
       </view>
   </view>
 </view>

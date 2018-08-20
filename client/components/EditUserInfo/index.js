@@ -1,4 +1,3 @@
-// components/EditUserInfo/index.js
 Component({
   /**
    * 组件的属性列表
@@ -6,6 +5,12 @@ Component({
   properties: {
     infoLists:{
       type:Array
+    },
+    nickName:{
+      type:String
+    },
+    phoneNumber:{
+      type:String
     }
   },
 
@@ -35,13 +40,36 @@ Component({
     bindChangeDate:function(e){
       this.setData({ date: e.detail.value});
     }
+    , bindChangeName(e){
+      this.setData({ name : e.detail.value });
+    }
     , modifyPhone:function(){
       wx.navigateTo({
         url: '../../pages/loginByPhoneNum/index',
       })
     }
     , submit:function(){
-      
+      let that=this;
+      const { sex, education, date,nickName}=this.data;
+      const app =getApp();
+      wx.request({
+        url: 'http://dyhzjbeisen.ceping.com/Activity/SavePersonInfo ',
+        data: Object.assign(app.globalData.commonInfo, {
+          Name: nickName,
+          Education: education,
+          Sex: sex,
+          Birthday: date
+        }),
+        header: {
+          'content-type': 'application/json' // 默认值
+        },
+        method: "POST",
+        success: function (res) {
+          if (res.errMsg == "request:ok") {
+            that.triggerEvent("saveInfoAfter")
+          } 
+        }
+      })
     }
   }
 })

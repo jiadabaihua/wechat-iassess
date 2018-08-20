@@ -56,6 +56,9 @@ Page({
         app.globalData.loginInfo.signature = e.signature;
       }
     })
+    wx.setNavigationBarTitle({
+      title: '登录',
+    })
   },
 
   /**

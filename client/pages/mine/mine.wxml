@@ -1,11 +1,14 @@
 <view wx:if="{{status==1}}">
     <ShowUserInfo
+      phoneNumber="{{phoneNumber}}"
       bindeditUserInfo="editUserInfo"
       nickName="{{userInfo.nickName}}"
     />
 </view>
 <view wx:elif="{{status==2}}">
     <EditUserInfo
+      bind:saveInfoAfter="saveInfoAfter"
+      phoneNumber="{{phoneNumber}}"
       infoLists="{{infoLists}}"
       nickName="{{userInfo.nickName}}"
     />

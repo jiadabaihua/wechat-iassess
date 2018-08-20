@@ -1,0 +1,95 @@
+page{
+  background:#f7f6fd;
+}
+.head{
+  background: #fff;
+  box-sizing: border-box;
+  padding: 18px 15px;
+  margin-bottom: 11px;
+  display: flex;
+}
+.avatar{
+  width: 52px;
+  height: 52px;
+  flex: 0 0 52px;
+  border-radius: 100%;
+  overflow: hidden;
+}
+.result-wrapper{
+  margin-left: 15px;
+  flex: 1;
+}
+.control-btns{
+  flex: 1;
+  display: flex;
+}
+.record{
+  display: flex;
+}
+.share,.ranking,.praise,.score{
+  flex: 1;
+}
+.user-name{
+  font-family:PingFangSC-Regular;
+  font-size:17px;
+  color:#1f2c2a;
+}
+.ranking view:first-child,
+.score view:first-child{
+  opacity:0.6;
+  font-family:PingFangSC-Medium;
+  font-size:12px;
+  color:#79817f;
+}
+.ranking view:last-child
+,.score view:last-child{
+  opacity:0.8;
+  font-family:PingFangSC-Medium;
+  font-size:23px;
+  color:#f8732a;
+}
+.score view:last-child{
+  color: #2db7a0;
+}
+.title{
+  background: #fff;
+  text-align: center;
+  padding: 9px 0;
+  font-family:PingFangSC-Regular;
+  font-size:14px;
+  color:#1f2c2a;
+  line-height:25px;
+  border-bottom: 1px solid #dde0e7;
+}
+.canvas-dialog{
+  position:fixed;
+  width:100%;
+  height:100%;
+  z-index:10;
+  top:0;
+  background:rgba(0,0,0,.2);
+}
+.share-image{
+  width: 250px;
+  height: 385px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.save-image-btn,.close{
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  border-radius:100%;
+  width:30px;
+  height:30px;
+  text-align: center;
+  padding: 0;
+  line-height: 30px;
+  color: #2db7a0;
+  font-size: 14px;
+}
+.close{
+  right: 86%;
+}

@@ -1,0 +1,48 @@
+<view class='ranking-page'>
+    <view class='head'>
+      <view class='avatar'>
+          <open-data type="userAvatarUrl" class='user-avatar'></open-data>
+      </view>
+      <view class='result-wrapper'>
+          <view class='user-name'>{{nickName || "焉浪"}}</view>
+          <view class='record'>
+              <view class='ranking'>
+                <view>排名</view>
+                <view>71</view>
+              </view>
+              <view class='score'>
+                <view>分数</view>
+                <view>192</view>
+              </view>
+          </view>
+      </view>
+      <view class='control-btns'>
+            <view class='share' >分享</view>
+            <view class='praise' bind:tap="eventDraw">点赞</view>
+          </view>
+    </view>
+    <view class='content'>
+      <view class='title'>
+        群内排行榜
+      </view>
+      <view class='lists-box'>
+        <view wx:for-items="{{list}}" wx:for-item="list" wx:key='list'>
+          <List 
+            order="{{list.order}}"
+            name="{{list.name}}"
+            score="{{list.score}}"
+            avatar="{{list.avatar}}"
+          />
+        </view>
+      </view>
+    </view>
+</view>
+<view class='canvas-dialog' style="display:{{showConvas}} ">
+  <image src="{{shareImage}}" class="share-image"></image>
+  <view>
+    <button bind:tap="eventSave" class='save-image-btn'>存</button>
+    <!-- <button bind:tap="close" class='close'>X</button> -->
+  </view>
+</view>
+
+<canvasdrawer painting="{{painting}}" bind:getImage="eventGetImage"/>

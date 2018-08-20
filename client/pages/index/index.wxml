@@ -8,10 +8,14 @@
         <!-- <view class='test-name'>
             {{testName}}
         </view> -->
-        <view wx:for-items="{{cardList}}" wx:for-item="card" wx:key='card' class='card-wrap'                   bindtap='enterTest' data-index="{{index}}">
-            
-            <template  is="card" data="{{index,...card}}"/>
-            
+        <view wx:for-items="{{cardList}}" wx:for-item="card" wx:key='card' 
+        class='card-wrap' 
+        bindtap='enterTest' 
+        data-index="{{index}}">
+        <template  
+          is="card" 
+          data="{{index,...card}}"
+          bindgoToRankingPage="goToRankingPage"/>
         </view>
    </view>
     <view class='preload-ing'>

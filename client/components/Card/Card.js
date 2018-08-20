@@ -32,5 +32,8 @@ Component({
     bindDateChange(){
       
     }
+    , goToRankingPage(){
+      this.triggerEvent("goToRankingPage")
+    }
   }
 })

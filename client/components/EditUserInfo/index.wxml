@@ -3,7 +3,7 @@
     <view class='avatar'>
       <open-data type="userAvatarUrl" class='user-avatar'></open-data>
     </view>
-    <text>{{nickName}}</text>
+    <text>{{phoneNumber}}</text>
     <view class='modify-phone' bindtap='modifyPhone'>修改账号</view>
   </view>
   <view class='edit-content'>
@@ -18,7 +18,7 @@
                   <text style='color:#1f2c2a;'>{{field.label}}</text>
               </view>
               <view class='field-control'>
-                  <input value="dddd"/>
+                  <input value="{{nickName}}" bindinput="bindChangeName"/>
               </view>
           </view>
 

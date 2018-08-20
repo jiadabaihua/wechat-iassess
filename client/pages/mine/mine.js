@@ -1,4 +1,3 @@
-// pages/mine/mine.js
 let app = getApp();
 Page({
 
@@ -7,6 +6,7 @@ Page({
    */
   data: {
     userInfo: {},
+    phoneNumber: "",
     status: 1,  //1,展示个人信息，2编辑个人信息
     infoLists: [{
       label: '姓名',
@@ -81,7 +81,11 @@ Page({
    */
   onLoad: function (options) {
     this.setData({
-      userInfo: app.globalData.userInfo
+      userInfo: app.globalData.userInfo,
+      phoneNumber:app.globalData.commonInfo.PhoneNumber
+    })
+    wx.setNavigationBarTitle({
+      title: '我的',
     })
   },
   editUserInfo: function () {
@@ -110,11 +114,13 @@ Page({
       text: '我的'
     })
   },
-
   /**
    * 生命周期函数--监听页面隐藏
    */
   onHide: function () {
+    this.setData({
+      status: 1
+    })
     wx.setTabBarItem({
       index: 2,
       iconPath: "images/mine.png",
@@ -123,14 +129,9 @@ Page({
     });
     app.globalData.isFromHome=false;
   },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
+  saveInfoAfter(){
+    this.setData({status:1})
   },
-
   /**
    * 页面相关事件处理函数--监听用户下拉动作
    */
